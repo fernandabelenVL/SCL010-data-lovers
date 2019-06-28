@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#cards-container {
+    background: grey;
+    padding: 20px;
+    text-align: center;
+}
+
+.pokemon-card{
+    border: 1px solid gray;
+    background: #fff;
+    max-width: 20%;
+}
