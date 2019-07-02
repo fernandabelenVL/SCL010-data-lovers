@@ -12,35 +12,48 @@
   <body>
     <!--Start Header-->
     <header>
-     <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX Logo"class="logo"></a>
-     <nav>
-       <a href="#">Inicio </a>
-       <a href="#">Contacto </a>
-     </nav>
+      <nav>
+        <div class="logo">
+          <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX-Logo"></a>
+        </div>
+        <div class="nav-links">
+          <a href="index.html" class="current">Inicio</a>
+          <a href="#">Noticias</a>
+          <a href="#">Contacto</a>
+        </div>
+      </nav>
     </header>
     <!--End Header-->
+
     <!--Start Main-->
     <main>
-      <!--Navegation block-->
-      <div class="filter-nav">
-        <div class="sticky">
-        </div>
-          <!--Navegation buscar-->
-        <div class="box">
-          <div class="container-1">
-            <span class="icon"><i class="fa fa-search"></i></span>
-            <input type="search" id="search" placeholder="Busca Tu pokemón " />
+      <section>
+        <div class="main-bg">
+            <div class="intro">
+              <h1>Bienvenido a InfoDex</h1>
+              <h2>Donde encontrarás toda la información sobre la primera generación "Kanto".<br>¡Descubre y anímate a atraparlos todos!</h2>
           </div>
         </div>
-      <!--Navegation Ordenar-->
-        <a href="#"></a><select name="Order"></a>
+      </section>
+      <!--Opciones -->
+      <div class="options-web">
+          <!--Buscar-->
+          <div class="search-box">
+            <input type="search" id="search" placeholder="Busca Tu pokemón " />
+            <span class="icon"><i class="fa fa-search"></i></span>
+          </div>
+      <!-- Ordenar-->
+      <div class="sortby-box">
+        <select name="Order">
         <option disabled selected value> --Ordenar por:--</option>
         <option value="A-Z">A-Z</option>
         <option value="Z-A"> Z-A</option>
         <option value="1-151"> 1-151</option>
         <option value="151-1"> 151-1</option>
-      </select>
-      <!--Navegation Filtrar-->
+       </select>
+      </div>
+      <!--Filtrar-->
+      <div class="filter-box">
       <select name="filtre">
         <option disabled selected value> --Filtro por Tipo--</option>
         <option value="">Acero</option>
@@ -62,12 +75,11 @@
         <option value="">Veneno</option>
         <option value="">Volador</option>
       </select>
-        <!--Navegation Valor agregado-->
-      <form action="button.html">
-       <div>
+      </div>
+        <!--Valor agregado-->
+       <div class="value-box">
         <a href="#"> <input type="button" value="Dato Interesante"></a>          
       </div>
-     </form>
      </div>
      </div>
       <!--Pokemon Cards-->
@@ -77,10 +89,31 @@
     <!--End Main-->
 
     <!--Start Footer-->
+    <footer class="footer-content">
+        <div class="info-box">
+            <div class="logo">
+                <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX Logo"></a>
+            </div>
+            <div class="footer-info">
+              <p>InfoDex es una aplicación que te ayudará a conocer sobre más sobre los pókemon de la región de Kanto.</p>
+              <div class="social-icons">
+                <a href="#"><img src="images/facebook-icon.png"></a>
+                <a href="#"><img src="images/instagram-icon.png"></a>
+              </div>
+            </div>
+        </div>
+      
+        <div class="subscribe">
+          <p>Suscríbete a nuestras novedades</p>
+          <input type="email" placeholder="Ingresa tu email">
+          <button id="subscribe-btn">Suscríbete</button>
+        </div>
+
+    </footer>
+
     <footer class="copyright">
           <p>&copy; Copyright Info Dex 2019 / Design and Development by <a href="https://github.com/AlejandraMoralesB" target="blank_">Alejandra Morales</a> & <a href="https://github.com/fernandabelenVL" target="blank_">Fernanda Vega</a></p>
           <button onclick="topFunction()" id="back-to-top" title="Go to top"> <i class="fas fa-arrow-up"></i> Volver arriba</i></button>
-          <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX Logo"class="logo"></a>
     </footer>
     <!--End Footer-->
 
