@@ -2,23 +2,74 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Info Dex</title>
+    <title>InfoDex</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&display=swap" rel="stylesheet">  
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <script src="https://kit.fontawesome.com/3e7b4a9a03.js"></script>
   </head>
-
   <body>
     <!--Start Header-->
     <header>
-      <h1>Info Dex</h1>
+     <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX Logo"class="logo"></a>
+     <nav>
+       <a href="#">Inicio </a>
+       <a href="#">Contacto </a>
+     </nav>
     </header>
     <!--End Header-->
-
     <!--Start Main-->
     <main>
       <!--Navegation block-->
-      <div>Aqui va la barra de orden, filtrado y calculo agregado </div>
-      <br> 
+      <div class="filter-nav">
+        <div class="sticky">
+        </div>
+          <!--Navegation buscar-->
+        <div class="box">
+          <div class="container-1">
+            <span class="icon"><i class="fa fa-search"></i></span>
+            <input type="search" id="search" placeholder="Busca Tu pokemón " />
+          </div>
+        </div>
+      <!--Navegation Ordenar-->
+        <a href="#"></a><select name="Order"></a>
+        <option disabled selected value> --Ordenar por:--</option>
+        <option value="A-Z">A-Z</option>
+        <option value="Z-A"> Z-A</option>
+        <option value="1-151"> 1-151</option>
+        <option value="151-1"> 151-1</option>
+      </select>
+      <!--Navegation Filtrar-->
+      <select name="filtre">
+        <option disabled selected value> --Filtro por Tipo--</option>
+        <option value="">Acero</option>
+        <option value="">Agua</option>
+        <option value="">Bicho</option>
+        <option value="">Dragón</option>
+        <option value="">Electrico</option>
+        <option value="">Fantasma</option>
+        <option value="">Fuego</option>
+        <option value="">Hada</option>
+        <option value="">Hielo</option>
+        <option value="">Lucha</option>
+        <option value="">Normal</option>
+        <option value="">Planta </option>
+        <option value="">Psiquico</option>
+        <option value="">Roca</option>
+        <option value="">Siniestro</option>
+        <option value="">Tierra</option>
+        <option value="">Veneno</option>
+        <option value="">Volador</option>
+      </select>
+        <!--Navegation Valor agregado-->
+      <form action="button.html">
+       <div>
+        <a href="#"> <input type="button" value="Dato Interesante"></a>          
+      </div>
+     </form>
+     </div>
+     </div>
       <!--Pokemon Cards-->
       <section id="cards-container">
       </section>
@@ -26,8 +77,10 @@
     <!--End Main-->
 
     <!--Start Footer-->
-    <footer>
-      <p>&copy; Copyright Info Dex 2019 / Desing by <a href="https://github.com/AlejandraMoralesB" target="blank_">Alejandra Morales</a> & <a href="https://github.com/fernandabelenVL" target="blank_">Fernanda Vega</a></p>
+    <footer class="copyright">
+          <p>&copy; Copyright Info Dex 2019 / Design and Development by <a href="https://github.com/AlejandraMoralesB" target="blank_">Alejandra Morales</a> & <a href="https://github.com/fernandabelenVL" target="blank_">Fernanda Vega</a></p>
+          <button onclick="topFunction()" id="back-to-top" title="Go to top"> <i class="fas fa-arrow-up"></i> Volver arriba</i></button>
+          <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX Logo"class="logo"></a>
     </footer>
     <!--End Footer-->
 
