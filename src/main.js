@@ -30,8 +30,66 @@ for (let i = 0 ; i < allPokemon.length ; i++){
     document.getElementById("cards-container").appendChild(newElement).innerHTML;
 };
 
+//ordenar ascendente
+  let allCards = document.getElementsByClassName("pokemon-card");
+  let sortData = document.getElementById("sort-Pokemon");
 
-//Back to top BTN
+  sortData.addEventListener("change", ()=>{
+    let condition = sortData.options[sortData.selectedIndex].value;
+    console.log(condition);
+    for (let i = 0 ; i < data.length ; i++){
+      if (condition === "A-Z"){
+          allCards[i].style.display = "none";
+          nameUp();
+            let newElement = document.createElement('div');
+            newElement.id = data[i].name;
+            newElement.className = "pokemon-card";
+            let newImage = document.createElement('IMG');
+            newImage.setAttribute("src", data[i].img)
+            let newName = document.createElement('p');
+            newName.className = "pokemon-name";
+            let newNumber = document.createElement('p');
+        
+            newElement.appendChild(newImage);
+            newElement.appendChild(newName);
+            newElement.appendChild(newNumber);
+            newName.innerHTML = data[i].name;
+            newNumber.innerHTML = data[i].num;
+            
+            document.getElementById("cards-container").appendChild(newElement).innerHTML;
+    }
+  
+    else if (condition === "Z-A") {
+      nameDown();
+        let newElement = document.createElement('div');
+        newElement.id = data[i].name;
+        newElement.className = "pokemon-card";
+        let newImage = document.createElement('IMG');
+        newImage.setAttribute("src", data[i].img)
+        let newName = document.createElement('p');
+        newName.className = "pokemon-name";
+        let newNumber = document.createElement('p');
+    
+        newElement.appendChild(newImage);
+        newElement.appendChild(newName);
+        newElement.appendChild(newNumber);
+        newName.innerHTML = data[i].name;
+        newNumber.innerHTML = data[i].num;
+        
+        document.getElementById("cards-container").appendChild(newElement).innerHTML;
+    };
+    
+    }
+  });
+
+
+  //remove.child
+
+  //document.getElementById("sort-Pokemon").addEventListener("change", nameUp);
+
+
+
+//Back to top
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {

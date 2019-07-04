@@ -1,10 +1,20 @@
 /* Manejo de data */
 
-// esta es una función de ejemplo
-// puedes ver como agregamos la función a nuestro objeto global window
+let data = POKEMON.pokemon;
+//ordenar de la A a la Z
+function nameUp (){
+data.sort(function(a, b){
+  return a.name.localeCompare(b.name);
+}); 
+console.log(data);
 
-const example = () => {
-  return 'example';
 };
 
-window.example = example;
+//ordenar de la Z a la A
+function nameDown (){
+data.sort(function(a, b){
+	return b.name.localeCompare(a.name);
+});
+console.log(data);
+};
+
