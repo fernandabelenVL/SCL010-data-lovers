@@ -31,60 +31,61 @@
         <div class="main-bg">
             <div class="intro">
               <h1>Bienvenido a InfoDex</h1>
-              <h2>Donde encontrarás toda la información sobre la primera generación "Kanto".<br>¡Descubre y anímate a atraparlos todos!</h2>
+              <h2>Donde encontrarás toda la información sobre la generación Kanto en Pokémon Go!.<br>¡Descubre y anímate a atraparlos todos!</h2>
           </div>
         </div>
       </section>
       <!--Opciones -->
-      <div class="options-web">
+      <section class="options-web">
           <!--Buscar-->
           <div class="search-box">
-            <input type="search" id="search" placeholder="Busca Tu pokemón " />
-            <span class="icon"><i class="fa fa-search"></i></span>
+            <span class="icon"></span><i class="fa fa-search"></i></span>
+            <input type="text" id="search" placeholder="Buscar pokémon"/>
           </div>
-      <!-- Ordenar-->
-      <div class="sortby-box">
-        <select name="Order" id="sort-Pokemon">
-          <option disabled selected value> Ordenar por:</option>
-          <option value="A-Z">A-Z</option>
-          <option value="Z-A"> Z-A</option>
-          <option value="1-151"> 1-151</option>
-          <option value="151-1"> 151-1</option>
-       </select>
-      </div>
-      <!--Filtrar-->
-      <div class="filter-box">
-      <select name="filtre">
-        <option disabled selected value>Filtro por Tipo:</option>
-        <option value="">Acero</option>
-        <option value="">Agua</option>
-        <option value="">Bicho</option>
-        <option value="">Dragón</option>
-        <option value="">Electrico</option>
-        <option value="">Fantasma</option>
-        <option value="">Fuego</option>
-        <option value="">Hada</option>
-        <option value="">Hielo</option>
-        <option value="">Lucha</option>
-        <option value="">Normal</option>
-        <option value="">Planta </option>
-        <option value="">Psiquico</option>
-        <option value="">Roca</option>
-        <option value="">Siniestro</option>
-        <option value="">Tierra</option>
-        <option value="">Veneno</option>
-        <option value="">Volador</option>
-      </select>
-      </div>
-        <!--Valor agregado-->
-       <div class="value-box">
-        <a href="#"> <input type="button" value="Dato Interesante" id="value-btn"></a>          
-      </div>
-     </div>
-     </div>
-      <!--Pokemon Cards-->
-      <section id="cards-container">
+          <!-- Ordenar-->
+          <div class = "sort">
+          <div class="sortby-box">
+            <select name="Order" id="sort-Pokemon">
+              <option disabled selected value> Ordenar por:</option>
+              <option id="name-up" value="A-Z">A-Z</option>
+              <option id="name-down" value="Z-A"> Z-A</option>
+              <option id="num-up"value="1-151"> 1-151</option>
+              <option id="num-down" value="151-1"> 151-1</option>
+          </select>
+          </div>
+          <!--Filtrar-->
+          <div class="filter-box">
+            <select name="filtre">
+              <option disabled selected value>Filtro por Tipo:</option>
+              <option value="">Acero</option>
+              <option value="">Agua</option>
+              <option value="">Bicho</option>
+              <option value="">Dragón</option>
+              <option value="">Electrico</option>
+              <option value="">Fantasma</option>
+              <option value="">Fuego</option>
+              <option value="">Hada</option>
+              <option value="">Hielo</option>
+              <option value="">Lucha</option>
+              <option value="">Normal</option>
+              <option value="">Planta </option>
+              <option value="">Psiquico</option>
+              <option value="">Roca</option>
+              <option value="">Siniestro</option>
+              <option value="">Tierra</option>
+              <option value="">Veneno</option>
+              <option value="">Volador</option>
+            </select>
+          </div>
+            <!--Valor agregado-->
+          <div class="value-box">
+            <a href="#"><input type="button" value="Dato Interesante" id="value-btn"></a>          
+          </div>
+        </div>
       </section>
+    
+      <!--Pokemon Cards-->
+      <section id="cards-container"></section>
     </main>
     <!--End Main-->
 
@@ -97,8 +98,8 @@
             <div class="footer-info">
               <p>InfoDex es una aplicación que te ayudará a conocer sobre más sobre los pókemon de la región de Kanto.</p>
               <div class="social-icons">
-                <a href="#"><img src="images/facebook-icon.png"></a>
-                <a href="#"><img src="images/instagram-icon.png"></a>
+                <a href="index.html"><img src="images/facebook-icon.png"></a>
+                <a href="index.html"><img src="images/instagram-icon.png"></a>
               </div>
             </div>
         </div>
@@ -113,7 +114,7 @@
 
     <footer class="copyright">
           <p>&copy; Copyright Info Dex 2019 / Design and Development by <a href="https://github.com/AlejandraMoralesB" target="blank_">Alejandra Morales</a> & <a href="https://github.com/fernandabelenVL" target="blank_">Fernanda Vega</a></p>
-          <button onclick="topFunction()" id="back-to-top" title="Go to top"> <i class="fas fa-arrow-up"></i> Volver arriba</i></button>
+          <button onclick="topFunction()" id="back-to-top" title="Go to top"> <i class="fas fa-arrow-up"></i></button>
     </footer>
     <!--End Footer-->
 
