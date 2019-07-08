@@ -39,32 +39,24 @@ let showPokemon = (arr) => {
   document.getElementById("cards-container").appendChild(pokeCard).innerHTML;
 }
 };
-
+//ordenar por nombre y tipo
 const sortPokemon = document.getElementById("sort-Pokemon");
 sortPokemon.addEventListener("change", ()=>{
-container.innerHTML="";
-let condition = sortPokemon.options[sortPokemon.selectedIndex].value;
-if (condition === "A-Z"){
-  newArray = nameUp(data);
+  container.innerHTML="";
+  window.condition = sortPokemon.options[sortPokemon.selectedIndex].value;
+  console.log(condition);
+  sortBy(data, condition);
   showPokemon(data);
-  }
-
-else if (condition === "Z-A") {
-  newArray = nameDown(data);
-  showPokemon(data);
-}
-
-else if (condition === "1-151") {
-  newArray = numUp(data);
-  showPokemon(data);
-}
-
-else if (condition === "151-1") {
-  newArray = numDown(data);
-  showPokemon(data);
-}
-});
-
+  });
+//Filtrar por Tipo
+const selectType = document.getElementById("type");// selector por tipo 
+selectType.addEventListener("change", showByType);
+function showByType() {
+    //Condición = variable
+    let data = filterTypesPokemon(selectType.value); // Llamo a la funcion del data
+    container.innerHTML = "";
+    showPokemon(data)
+      }
 
 //Back to top
 window.onscroll = function() {scrollFunction()};
@@ -127,12 +119,3 @@ function searchPokemon() {
   }
 }
 
-//Filtrar por Tipo
-const selectType = document.getElementById("type");// selector por tipo 
-selectType.addEventListener("change", showByType);
-function showByType() {
-    //Condición = variable
-    let data = filterTypesPokemon(selectType.value); // Llamo a la funcion del data
-    container.innerHTML = "";
-    showPokemon(data)
-      }

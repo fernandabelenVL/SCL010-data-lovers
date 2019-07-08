@@ -1,28 +1,25 @@
 let data = POKEMON.pokemon;
 
-//ordenar de la A a la Z
-function nameUp (){
-data.sort(function(a, b){
-  return a.name.localeCompare(b.name);
-}); 
-};
-//ordenar de la Z a la A
-function nameDown (){
-data.sort(function(a, b){
-	return b.name.localeCompare(a.name);
-});
-};
-//ordenar numero ascendente
-function numUp (){
-  data.sort(function(a, b){
-    return a.id - b.id
-  });
+//filtrar por nombre y número
+const sortBy = (data, condition) => {
+  let orderPokemon = "";
+  if (condition === 'A-Z') {
+    orderPokemon = data.sort ((a,b) => a.name.localeCompare(b.name));
+  }
+  else if (condition === 'Z-A') {
+    orderPokemon = data.sort((a, b) => a.name.localeCompare(b.name)).reverse();
+  }
+  else if (condition === '1-151') {
+    orderPokemon = data.sort(ordenByNumber);
+  }
+  else if (condition === '151-1') {
+    orderPokemon = data.sort(ordenByNumber).reverse();
+  }
+  console.log(orderPokemon);
 }
-//ordenar numero ascendente
-function numDown (){
-  data.sort(function(a, b){
-    return b.id - a.id
-  });
+//funcion ordenar por número
+function ordenByNumber (a, b) {
+  return a.id - b.id;
 }
 
 //Filtrar por Tipo
