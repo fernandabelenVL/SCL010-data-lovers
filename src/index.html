@@ -42,7 +42,7 @@
             <span class="icon"></span><i class="fa fa-search"></i></span>
             <input type="text" id="searchPokemon" placeholder="Buscar pokémon"/>
           </div>
-          <input type="button" value="Buscar" id="search-btn"  onclick="buscarPokemon()">
+          <input type="button" value="Buscar" id="search-btn"  onclick="searchPokemon()">
        <!-- Ordenar-->
           <div class = "sort">
           <div class="sortby-box">
@@ -55,8 +55,8 @@
           </select>
           </div>
           <!--Filtrar-->
-          <div class="filter-box">
-            <select name="filtre" id="filter-Pokemon">
+          <div class="type-filter">
+            <select name="filter" id="type">
               <option disabled selected value>Filtro por Tipo:</option>
               <option value="Water">Agua</option>
               <option value="Bug">Bicho-Insecto</option>

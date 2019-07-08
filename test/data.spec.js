@@ -3,13 +3,13 @@ global.assert = require('chai').assert;
 require('../src/data');
 require('./data.spec.js');
 
-describe('orderPokemon', () => {
+describe('nameUp', () => {
 
-  it('debería ser una función', () => {
-    assert.equal(typeof window.orderPokemon, 'function');
+  it('debería ser una funtion', () => {
+    assert.equal(typeof nameUp, 'function');
   });
   it('debería retornar los pokemones ordenado de la A a la Z', () => {
-    assert.deepEqual(window.(data, "name", "az"), [
+    assert.deepEqual(window.data, "name", "az"), [
       {
         "id": 1,
         "num": "001",
@@ -36,7 +36,7 @@ describe('orderPokemon', () => {
           "Normal"
         ]
       }
-    ]);
+    ];
   });
 
   it('deberia retornar el mismo arreglo', () =>{
