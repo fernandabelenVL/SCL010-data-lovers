@@ -40,9 +40,10 @@
           <!--Buscar-->
           <div class="search-box">
             <span class="icon"></span><i class="fa fa-search"></i></span>
-            <input type="text" id="search" placeholder="Buscar pokémon"/>
+            <input type="text" id="searchPokemon" placeholder="Buscar pokémon"/>
           </div>
-          <!-- Ordenar-->
+          <input type="button" value="Buscar" id="search-btn"  onclick="buscarPokemon()">
+       <!-- Ordenar-->
           <div class = "sort">
           <div class="sortby-box">
             <select name="Order" id="sort-Pokemon">
@@ -55,26 +56,23 @@
           </div>
           <!--Filtrar-->
           <div class="filter-box">
-            <select name="filtre">
+            <select name="filtre" id="filter-Pokemon">
               <option disabled selected value>Filtro por Tipo:</option>
-              <option value="">Acero</option>
-              <option value="">Agua</option>
-              <option value="">Bicho</option>
-              <option value="">Dragón</option>
-              <option value="">Electrico</option>
-              <option value="">Fantasma</option>
-              <option value="">Fuego</option>
-              <option value="">Hada</option>
-              <option value="">Hielo</option>
-              <option value="">Lucha</option>
-              <option value="">Normal</option>
-              <option value="">Planta </option>
-              <option value="">Psiquico</option>
-              <option value="">Roca</option>
-              <option value="">Siniestro</option>
-              <option value="">Tierra</option>
-              <option value="">Veneno</option>
-              <option value="">Volador</option>
+              <option value="Water">Agua</option>
+              <option value="Bug">Bicho-Insecto</option>
+              <option value="Dragon">Dragón</option>
+              <option value="Electric">Electrico</option>
+              <option value="Ghost">Fantasma</option>
+              <option value="Fire">Fuego</option>
+              <option value="Ice">Hielo</option>
+              <option value="Fighting">Lucha</option>
+              <option value="Normal">Normal</option>
+              <option value="Grass">Planta </option>
+              <option value="Psychic">Psiquico</option>
+              <option value="Rock">Roca</option>
+              <option value="Ground">Tierra</option>
+              <option value="Poison">Veneno</option>
+              <option value="Flying">Volador</option>
             </select>
           </div>
             <!--Valor agregado-->

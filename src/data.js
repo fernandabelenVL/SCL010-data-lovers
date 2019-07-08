@@ -40,6 +40,12 @@ data.sort(function(a, b){
 };
 
 
+function filterPoke() {
+  document.getElementById("demo").innerHTML = data.stringify(data.filter(TypeId));
+}
+
+
+
 //ordenar de por ID
 /*function sortbyId () {
 data.sort(function(a,b){
@@ -69,3 +75,12 @@ function numDown (){
   });
 }
 
+
+//filtrar por tipo
+/*const filterPokeType = (data, condition)=>{
+  const resultFilter = data.filter(element =>{
+    return element.type.includes(condition);
+  }) 
+  return resultFilter;
+}
+window.filterPokeType=filterPokeType;*/
