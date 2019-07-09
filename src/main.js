@@ -3,9 +3,10 @@ window.addEventListener("load", () => {
 });
 
 //convertimos a objeto el array
-const allPokemon = POKEMON.pokemon;
+const allPokemon = window.POKEMON.pokemon;
 const container = document.getElementById("cards-container");
 let newArray;
+
 
 let showPokemon = (arr) => {
   //creamos las cartas
@@ -43,8 +44,9 @@ let showPokemon = (arr) => {
 const sortPokemon = document.getElementById("sort-Pokemon");
 sortPokemon.addEventListener("change", ()=>{
   container.innerHTML="";
-  window.condition = sortPokemon.options[sortPokemon.selectedIndex].value;
-  console.log(condition);
+  let data =window.POKEMON.pokemon;
+  let condition = sortPokemon.options[sortPokemon.selectedIndex].value;
+  //console.log(condition);
   sortBy(data, condition);
   showPokemon(data);
   });
@@ -53,7 +55,7 @@ const selectType = document.getElementById("type");// selector por tipo
 selectType.addEventListener("change", showByType);
 function showByType() {
     //Condición = variable
-    let data = filterTypesPokemon(selectType.value); // Llamo a la funcion del data
+    let data = window.filterTypesPokemon(selectType.value); // Llamo a la funcion del data
     container.innerHTML = "";
     showPokemon(data)
       }
@@ -76,17 +78,15 @@ function topFunction() {
 
 // Función Buscar Pokemon
 function searchPokemon() {
-
   // capturar palabra a buscar 
-  let nameSearch = document.getElementById("searchPokemon").value;
+let nameSearch = document.getElementById("searchPokemon").value;
   // La variable siempre se deben intentar definir fuera de los ciclos
  let namePoke;
   // Borra los datos del contenedor
   container.innerHTML = "";
-
+  let data =window.POKEMON.pokemon;
   for (let i = 0 ; i < data.length ; i++) {
     namePoke = data[i].name;
-
     // comparación entre nombre buscado y nombre del pokemon actual
     var searchResult = namePoke.localeCompare(nameSearch);
 
@@ -115,7 +115,7 @@ function searchPokemon() {
 
     if ( i + 1 == data.length ) {
       alert("Pokemon no encontrado o revise si esta escrito de la misma manera en las cartas");    }
-    console.log("despues del If: " +  data.length);
+   // console.log("despues del If: " +  data.length);
   }
 }
 

@@ -1,6 +1,7 @@
+
 global.window = global;
 global.assert = require('chai').assert;
-require('../src/data');
+require('../src/data/pokemon/pokemon');
 require('./data.spec.js');
 
 describe('nameUp', () => {

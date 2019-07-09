@@ -1,4 +1,4 @@
-let data = POKEMON.pokemon;
+let data = window.POKEMON.pokemon;
 
 //filtrar por nombre y número
 const sortBy = (data, condition) => {
@@ -15,7 +15,8 @@ const sortBy = (data, condition) => {
   else if (condition === '151-1') {
     orderPokemon = data.sort(ordenByNumber).reverse();
   }
-  console.log(orderPokemon);
+  return(orderPokemon);
+  //console.log(orderPokemon);
 }
 //funcion ordenar por número
 function ordenByNumber (a, b) {
@@ -26,7 +27,8 @@ function ordenByNumber (a, b) {
 const filterTypesPokemon = (type) => {
 data = POKEMON.pokemon;
 let filter = [];
-  for (i = 0; i < data.length; i++) {
+let i ="";
+  for ( i = 0; i < data.length; i++) {
       if (data[i].type[0] == type) {
           filter.push(data[i]);
       } else if (data[i].type[1] == type) {
