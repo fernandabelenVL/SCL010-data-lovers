@@ -39,19 +39,19 @@
       <section class="options-web">
           <!--Buscar-->
           <div class="search-box">
-            <span class="icon"></span><i class="fa fa-search"></i></span>
+            <span class="icon"></span><i class="fa fa-search"></i>
             <input type="text" id="searchPokemon" placeholder="Buscar pokémon"/>
+            <input type="button" value="Buscar" id="search-btn"  onclick="searchPokemon()">
           </div>
-          <input type="button" value="Buscar" id="search-btn"  onclick="searchPokemon()">
        <!-- Ordenar-->
           <div class = "sort">
           <div class="sortby-box">
             <select name="Order" id="sort-Pokemon">
               <option disabled selected value> Ordenar por:</option>
               <option id="name-up" value="A-Z">A-Z</option>
-              <option id="name-down" value="Z-A"> Z-A</option>
-              <option id="num-up"value="1-151"> 1-151</option>
-              <option id="num-down" value="151-1"> 151-1</option>
+              <option id="name-down" value="Z-A">Z-A</option>
+              <option id="num-up" value="1-151">1-151</option>
+              <option id="num-down" value="151-1">151-1</option>
           </select>
           </div>
           <!--Filtrar-->
