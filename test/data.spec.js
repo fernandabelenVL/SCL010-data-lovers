@@ -45,7 +45,7 @@ describe('nameUp', () => {
   });
 
   it('debería retornar los pokemones ordenado de la Z a la A', () => {
-    assert.deepEqual(window.orderPokemon(data, "name", "za"), [
+    assert.deepEqual(window.orderPokemon(window.data, "name", "za"), [
       {
         "id": 128,
         "num": "128",

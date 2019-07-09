@@ -5,8 +5,6 @@ window.addEventListener("load", () => {
 //convertimos a objeto el array
 const allPokemon = window.POKEMON.pokemon;
 const container = document.getElementById("cards-container");
-let newArray;
-
 
 let showPokemon = (arr) => {
   //creamos las cartas
@@ -47,7 +45,7 @@ sortPokemon.addEventListener("change", ()=>{
   let data =window.POKEMON.pokemon;
   let condition = sortPokemon.options[sortPokemon.selectedIndex].value;
   //console.log(condition);
-  sortBy(data, condition);
+  window.sortBy(data, condition);
   showPokemon(data);
   });
 //Filtrar por Tipo
@@ -75,6 +73,7 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+topFunction();
 
 // Función Buscar Pokemon
 function searchPokemon() {
@@ -113,9 +112,10 @@ let nameSearch = document.getElementById("searchPokemon").value;
       return;
     } 
 
-    if ( i + 1 == data.length ) {
-      alert("Pokemon no encontrado o revise si esta escrito de la misma manera en las cartas");    }
+    //if ( i + 1 == data.length ) {
+      // alert("Pokemon no encontrado o revise si esta escrito de la misma manera en las cartas");    }
    // console.log("despues del If: " +  data.length);
   }
+  
 }
-
+searchPokemon();
