@@ -38,14 +38,19 @@
       <!--Opciones -->
       <section class="options-web">
           <!--Buscar-->
+          <div class="search">
+            <label>Busca por nombre o número</label>
           <div class="search-box">
             <span class="icon"></span><i class="fa fa-search"></i>
             <input type="text" id="searchPokemon" placeholder="Buscar pokémon"/>
-            <input type="button" value="Buscar" id="search-btn"  onclick="searchPokemon()">
+            <!--<input type="button" value="Buscar" id="search-btn"  onclick="searchPokemon()">-->
           </div>
+        </div>
        <!-- Ordenar-->
+
           <div class = "sort">
           <div class="sortby-box">
+            <label>Ordenar por:</label>
             <select name="Order" id="sort-Pokemon">
               <option disabled selected value> Ordenar por:</option>
               <option id="name-up" value="A-Z">A-Z</option>
@@ -56,6 +61,7 @@
           </div>
           <!--Filtrar-->
           <div class="type-filter">
+            <label>Filtrar por tipo:</label>
             <select name="filter" id="type">
               <option disabled selected value>Filtro por Tipo:</option>
               <option value="Water">Agua</option>
