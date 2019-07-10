@@ -27,18 +27,30 @@ function ordenByNumber (a, b) {
   return a.id - b.id;
 }
 
-//Filtrar por Tipo
-const filterTypesPokemon = (type) => {
-let data = window.POKEMON.pokemon;
-let filter = [];
-let i ="";
-  for ( i = 0; i < data.length; i++) {
-      if (data[i].type[0] == type) {
-          filter.push(data[i]);
-      } else if (data[i].type[1] == type) {
-          filter.push(data[i]);
-      }
-  }
-return filter;
-}
-window.filterTypesPokemon = filterTypesPokemon;
+// data = array | type = tipo objeto poke
+const filterTypes = (data , type) => {
+  let filterPokemon = data.filter(element => {
+    // crea array nuevo con cada objeto que incluya el tipo "condition"
+    return element.type.includes(type)
+  });
+  return filterPokemon
+};
+
+window.filterTypes = filterTypes;
+
+
+// //Filtrar por Tipo
+// const filterTypesPokemon = (type) => {
+// let data = window.POKEMON.pokemon;
+// let filter = [];
+// let i ="";
+//   for ( i = 0; i < data.length; i++) {
+//       if (data[i].type[0] == type) {
+//           filter.push(data[i]);
+//       } else if (data[i].type[1] == type) {
+//           filter.push(data[i]);
+//       }
+//   }
+// return filter;
+// }
+// window.filterTypesPokemon = filterTypesPokemon;

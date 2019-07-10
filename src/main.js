@@ -48,15 +48,42 @@ sortPokemon.addEventListener("change", ()=>{
   window.sortBy(data, condition);
   showPokemon(data);
   });
-//Filtrar por Tipo
-const selectType = document.getElementById("type");// selector por tipo 
-selectType.addEventListener("change", showByType);
-function showByType() {
-    //Condición = variable
-    let data = window.filterTypesPokemon(selectType.value); // Llamo a la funcion del data
-    container.innerHTML = "";
-    showPokemon(data)
-      }
+
+
+// //Filtrar por Tipo
+// const selectType = document.getElementById("type");// selector por tipo 
+// selectType.addEventListener("change", () =>{
+//   container.innerHTML = "";
+//   let data = window.POKEMON.pokemon;
+//   let type = sortPokemon.options[sortPokemon.selectedIndex].value;
+//   showByType(data, type)
+//   showPokemon(data);
+
+// });
+const selectType = document.getElementById("type");
+selectType.addEventListener("change", ()=> {
+  // el tipo seleccionado es almacenado en condition
+  let condition = selectType.options[selectType.selectedIndex].value;
+  // borra contenido de section
+  container.innerHTML = "";
+  // crea nuevos divs en base a array
+  let pokeArray = window.filterTypes(window.data, condition);
+  showPokemon(pokeArray);
+} 
+);
+
+
+// //Filtrar por Tipo
+// const selectType = document.getElementById("type");// selector por tipo 
+// selectType.addEventListener("change", showByType);
+
+// function showByType() {
+//     //Condición = variable
+//     let data = window.filterTypesPokemon(selectType.value); // Llamo a la funcion del data
+//     //console.log(data)
+//     container.innerHTML = "";
+//     showPokemon(data)
+// }
 
 //Back to top
 window.onscroll = function() {scrollFunction()};
