@@ -157,10 +157,10 @@ label {
     
  select {
     border: none;
-    font-size: 14px;
-    height: 32px;
+    font-size: 13px;
+    height: 30px;
     padding: 5px;
-    width: 250px;
+    width: 155px;
     flex-wrap: wrap;
     margin-top: 3px;
 }

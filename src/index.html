@@ -83,11 +83,17 @@
           </div>
             <!--Valor agregado-->
           <div class="value-box">
-            <a href="#"><input type="button" value="Dato Interesante" id="value-btn"></a>          
+              <label>Filtrar por tipo:</label>
+              <select name="filter" id="egg">
+                <option disabled selected value> Filtro por Huevos y %</option>
+                <option value="Not in Eggs">Sin huevos </option>
+                <option value="2 km">2 kms</option>
+                <option value="5 km">5 kms </option>
+                <option value="10 km">10 kms</option>
+              </select>      
           </div>
         </div>
       </section>
-    
       <!--Pokemon Cards-->
       <section id="cards-container"></section>
     </main>

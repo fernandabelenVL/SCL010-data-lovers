@@ -55,9 +55,27 @@ selectType.addEventListener("change", ()=> {
   // el tipo seleccionado es almacenado en condition
   let condition = selectType.options[selectType.selectedIndex].value;
   // borra contenido de section
-  container.innerHTML = "";
+  container.innerHTML = "El " + window.computeStats(pokemonType,dataPokemon) + "% del total de Pokemones corresponde al tipo " + condition;
   // crea nuevos divs en base a array
   let pokeArray = window.filterTypes(window.data, condition);
+  showPokemon(pokeArray);
+  let pokeArray = window.filterType(window.data, condition);
+  showPokemon(pokeArray);
+} 
+);
+
+let pokePercent="";
+const resultPercent = document.getElementById("containerPercent");
+//filtrar por Huevo Tipo de pokemon 
+const selectTypeegg = document.getElementById("egg");
+selectTypeegg.addEventListener("change", ()=> {
+  resultPercent.innerHTML = "";
+  // el tipo seleccionado es almacenado en condition
+  let condition = selectTypeegg.options[selectTypeegg.selectedIndex].value;
+  // borra contenido de section
+  container.innerHTML = "";
+  // crea nuevos divs en base a array
+  let pokeArray = window.filterTypesegg(window.data, condition);
   showPokemon(pokeArray);
 } 
 );
@@ -136,49 +154,3 @@ const filter = () => {
   }
 }
 search.addEventListener("keyup", filter);
-
-
-// // Función Buscar Pokemon
-// function searchPokemon() {
-//   // capturar palabra a buscar 
-// let nameSearch = document.getElementById("searchPokemon").value;
-//   // La variable siempre se deben intentar definir fuera de los ciclos
-//  let namePoke;
-//   // Borra los datos del contenedor
-//   container.innerHTML = "";
-//   let data =window.POKEMON.pokemon;
-//   for (let i = 0 ; i < data.length ; i++) {
-//     namePoke = data[i].name;
-//     // comparación entre nombre buscado y nombre del pokemon actual
-//     var searchResult = namePoke.localeCompare(nameSearch);
-
-//     if ( searchResult == 0 ) {
-//       alert("Pokemon encontrado");
-      
-//         let newElement = document.createElement('div');
-//         newElement.id = data[i].name;
-//         newElement.className = "pokemon-card";
-//         let newImage = document.createElement('IMG');
-//         newImage.setAttribute("src", data[i].img);
-//         let newName = document.createElement('p');
-//         newName.className = "pokemon-name";
-//         let newNumber = document.createElement('p');
-//         newNumber.className = "pokemon-number";
-      
-//         newElement.appendChild(newImage);
-//         newElement.appendChild(newName);
-//         newElement.appendChild(newNumber);
-//         newName.innerHTML = data[i].name;
-//         newNumber.innerHTML = "#" + allPokemon[i].num;
-      
-//         document.getElementById("cards-container").appendChild(newElement).innerHTML;
-//       return;
-//     } 
-
-//     //if ( i + 1 == data.length ) {
-//       // alert("Pokemon no encontrado o revise si esta escrito de la misma manera en las cartas");    }
-//    // console.log("despues del If: " +  data.length);
-//   }
-  
-// }
-// searchPokemon();

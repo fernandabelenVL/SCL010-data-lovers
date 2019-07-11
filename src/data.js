@@ -38,6 +38,16 @@ const filterTypes = (data , type) => {
 
 window.filterTypes = filterTypes;
 
+//Filtrar por tipo de huevo y sacar el % 
+const filterTypesegg = (data , egg ) => {
+  let filterPokemonegg = data.filter(element => {
+    // crea array nuevo con cada objeto que incluya el tipo "condition"
+    return element.egg.includes(egg)
+  });
+  return filterPokemonegg
+};
+
+window.filterTypesegg = filterTypesegg;
 
 // //Filtrar por Tipo
 // const filterTypesPokemon = (type) => {
@@ -54,3 +64,9 @@ window.filterTypes = filterTypes;
 // return filter;
 // }
 // window.filterTypesPokemon = filterTypesPokemon;
+
+const calcPercent = (value, data) =>{
+  let resultCalc = Math.round((value.length * 100) / data.length );
+  return resultCalc;
+} 
+window.calcPercent= calcPercent;
