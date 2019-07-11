@@ -1,6 +1,7 @@
+#InfoDex 
+
 ![infodex-banner](img-readme/ima-banner.jpg) 
 
-#InfoDex 
 “InfoDex” es una aplicación web que les brinda a los usuarios información relevante sobre los pokémon de la región Kanto para poder ayudarlos a conocer más sobre cada uno de ellos y así mejorar su nivel y experiencia de juego. La aplicación está dirigida hacia jugadores básicos e intermedios, es decir, jugadores que recién comienzan en el mundo de Pokémon Go! O tienen conocimientos poco profundos sobre el por lo que la información disponible se adecúa a sus necesidades, requerimientos y curiosidades, para así convertirse en jugadores avanzados en Pokémon Go”.
 
 ##Tabla de Contenidos 
@@ -117,7 +118,6 @@ Se generó observaciones de usabilidad y que fueron más relacionadas al diseño
 
 #### Colores 
 
-
 [Colores en Material.io](https://material.io/tools/color/#!/?view.left=1&view.right=0&primary.color=01579B&secondary.color=FFD600&primary.text.color=ffffff)
 
 #### Tipografía
@@ -139,17 +139,26 @@ Al finalizarla el test se les pregunta:
 
 **Usuario 1:**
 Sebastián, 27 años, jugador Básico de Pokémon Go, trabajador.
-Menciono que la página se trataba sobre Pokémon , No tuvo problemas para resolver lo solicitado , expreso que la información está clara y de fácil acceso , menciono que podía saber claramente los pokemones de la primera generación y la utilizaría , pero agregaría información específica en cada uno de las cartas.
+Menciono que la página se trataba sobre Pokémon , No tuvo problemas para resolver lo solicitado , expreso que la información está clara y de fácil acceso , menciono que podía saber claramente los pokemones de la primera generación y la utilizaría , pero agregaría información específica en cada uno de las cartas y verla de forma aumentada.
 
 **Usuario 2:**
 Camila, 18 años, No jugadora de Pokémon Go, Estudiante.
 Menciono que la página era de pokémon, consulto nuevamente las instrucciones, pero las pudo resolver. En la parte buscar sugirió colocar un botón para ejecutar, ya que no le quedaba muy claro, encontró que era un diseño atractivo que le servía para conocer a los pokemones si quisiera jugar, agregaría más interacción como videos.
 
-**Usuario 3: 
-.**
+**Usuario 3:**
+Carolina, 24 años,  jugadora básica de Pokémon Go, Trabajadora.
+Menciono que la página era para jugar pokémon Go, dijo que si utilizaría la página para jugar y que agregaría más estadísticas a la página.
 
-//- Las dificultades presentadas por el usuario fueron las de encontrar el botón para volver a ver todas las tarjetas, el cual se encontraba en el logo, por lo que se colocó de forma literal con el texto clickeable de "Ver todos los pokémon".
-//
+**Usuario 4:**
+Fernando, 15 años,  jugador básico- intermedio de Pokémon Go, estudiante.
+Menciono que la página contenía información para para jugar pokémon Go, dijo que si utilizaría la página para sacar algunos datos, pero agregaría las otras generaciones de pokemones, ya que una no le bastaba para mejorar su juego.
+
+**Usuario 5:**
+Ema, 38 años,  jugadora básica de Pokémon Go, estudiante.
+Menciono que la página contenía información de Pokémon , dijo que si utilizaría la página, que sería útil para poder conocer a cada uno de los pokemones. Le gusto los datos interesantes y que no agregaría nada.
+
+En conclusión, tratamos de tomar todas las mejoras y consejos, logramos el objetivo de que la página se entendiera y la pudieran ocupar en alguna oportunidad, en lo que agregarían colocamos el botón buscar, pero las otras sugerencias  son cosas que están fuera de nuestro alcance por ahora, como colocar la data de las otras generaciones,  más datos estadísticos e interacción estos fueron por temas de tiempo.
+
 
 ### 2.7. Evaluacion heuristica
 Realizamos la evaluacion para nuestra pagina web en el siguente sitio [haz click aquí](https://docs.google.com/spreadsheets/d/13KVs7EeZd64uLJNtYMjTlWrmC0LBJHIkDwiietV4bU4/edit?usp=sharing)
@@ -161,9 +170,10 @@ La interfaz permite al usuario:
 - Ordenar la Data por Número.
 - Filtrar la Data por Tipo.
 - Buscar Pokémon por Nombre.
-- Calculado agregado (DEFINIR )
+- Calculo agregado : Dato curioso en % en los filtros . 
 
 ##3 Pruebas Unitarias 💻
+
 ![test](img-readme/pruebas-unitarias.png)
 
 ##4 Herramientas 
