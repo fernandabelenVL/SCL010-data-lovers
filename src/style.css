@@ -11,6 +11,7 @@ body {
     overscroll-behavior: none;
     margin: 0;
     padding: 0;
+    background: #01579b;
 }
 
 h1, h2, p {
@@ -135,6 +136,7 @@ label{
     font-size: 14px;
     font-family: "Fira Sans", sans-serif;
     border: none;
+    width: 100%;
  }
  #search-btn {
     background: #4f83cc;
@@ -167,6 +169,10 @@ label{
      
 select:focus{ 
     outline: none;
+}
+
+select option {
+    font-family: "Fira Sans", sans-serif;
 }
 
 .sortby-box {
@@ -244,9 +250,15 @@ select:focus{
     align-items: center;
 }
 
-.pokemon-porcent{
-    align-content: center;
-    color:white;
+#pokemon-porcent{
+    padding: 20px 40px 0;
+    text-align: center;
+    color:#fff;
+    font-family: "Fira Sans", sans-serif;
+    background-color: #01579b;
+}
+#pokemon-porcent p{
+   margin-bottom: 5px; 
 }
 
 /*FOOTER--------------------------*/
@@ -421,20 +433,25 @@ footer {
 
 @media (min-width: 768px) and (max-width:1092px){
     .options-web {
-    justify-content: center;
+    align-items: center;
     padding: 10px 20px 20px;
     height: auto;
     }
     .search-box{
-        margin-right: 0px;
-    }
-    .sort {
-        margin: 13px 0 0 0    
+        margin-right: 10px;
     }
     .sortby-box {
         margin: 0px;
     }
-    
+}
+
+@media (max-width: 894px) {
+    .sort {
+        margin: 13px 0 0 0    
+    }
+    .options-web {
+        justify-content: center;
+    }
 }
 
 @media only screen and (max-width: 768px) {
@@ -464,7 +481,7 @@ footer {
     flex-direction: row;
     justify-content: center;
     height: auto;
-    padding: 20px 0 40px;    
+    padding: 20px 0;    
     }
 
     .sort {
@@ -542,6 +559,7 @@ footer {
 
     select {
         margin-bottom: 10px;
+        width: 210px;
     }
 }
 
