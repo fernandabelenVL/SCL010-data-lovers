@@ -558,8 +558,9 @@ footer {
     }
     .value-box{
         margin: 0px;
-    
+    }
 }
+
 @media (max-width: 375px){
     .search-box {
         width: 280px;
