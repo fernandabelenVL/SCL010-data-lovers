@@ -6,9 +6,13 @@
 ##Tabla de Contenidos 
 
 [1-Contexto](##1-Contexto)
+
 [2-Metodología UX](##2-Metodología-UX)
+
 [3-Pruebas Unitarias](##3-Pruebas-Unitarias)
+
 [4-Herramientas](##4-Herramientas)
+
 [5-Desarrolladoras web](##5-Desarrolladoras-web)
 
 
@@ -47,7 +51,7 @@ El usuario como jugado básico-intermedio necesita tener **acceso rápido, claro
 
 ##2-Metodología UX
 
-###2.1-Encuesta
+### 2.1-Encuesta
 En primera instancia se redacta y ejecuta una encuesta con el Formulario de Google Forms, para definir los parámetros generales de la aplicación, por ejemplo a qué usuario nos vamos a dirigir, cuáles son sus necesidades e intereses sobre y con el juego, como también para obtener claridad sobre cuál es la información más relevante a la que dichos usuarios necesitarían acceso.
 
 Con ésta información se plantea la jerarquización de la data y de sus funcionalidades para poder acomodarla dentro del flujo de la aplicación junto con parámetros de usabilidad (web y móvil) como también de diseño de interface (UI).
@@ -55,7 +59,7 @@ Con ésta información se plantea la jerarquización de la data y de sus funcion
 ####2.1.1 Alcance de la encuesta:
 La encuesta alcanzó un total de 36 respuestas en un día y se puede encontrar haciendo click [encuesta :memo:](https://docs.google.com/forms/d/e/1FAIpQLSdq6t9zDqskVMIGWNljzjxb7Z_z6tsroUHL9FXxoBTI1ueA7w/viewform)
 
-####2.1.2-Conclusiones de la encuesta:
+#### 2.1.2-Conclusiones de la encuesta:
 A partir de los resultados pudimos obtener y definir:
 
 - Nuestro usuario target: jugador básico-intermedio de Pokémon Go!
@@ -63,7 +67,7 @@ A partir de los resultados pudimos obtener y definir:
 - Información relevante para filtrar: tipo de pokémon.
 - Información relevante para los usuarios (cálculo agregado)
 
-###2.2-Historias de Usuario
+### 2.2-Historias de Usuario
 Posterior a la encuesta, y a un estudio más profundo sobre nuestro usuario, se desarrollan las Historias de Usuario, las cuales definen las acciones y funciones que nuestro usuario necesita y quiere realizar dentro de la app para lograr sus objetivos como jugador , la planificación se realizó mediante  un trabajo colaborativo en [Trello.](https://alejandramoralesb.github.io/SCL010-data-lovers/src/index.html)
 
 - **Historia de usuario 0:** “Yo como jugador básico-intermedio de Pokémon Go!, quiero poder ver todos pokémon de la región de Kanto para así poder conocerlos o identificar los que me falta”
@@ -91,12 +95,12 @@ Creamos en la App Web un selector en la pantalla, para buscar un pokémon en esp
 ➡ Criterios de aceptación
 La plataforma debe tener un contenedor en la pantalla principal con todos los pokémon para que el usuario pueda reconocerlos y acceder a su información inmediatamente.
 
-###2.3-Diagrama de Flujo 
+### 2.3-Diagrama de Flujo 
 A partir de las historias de usuario se define el flujo básico de la aplicación:
 
 ![alt text](img-readme/flujo.png)
 
-###2.4-Prototipo de Baja Calidad 
+### 2.4-Prototipo de Baja Calidad 
 
 #### Diagrama de Flujo 
 
@@ -110,7 +114,7 @@ El sketch fue presentado a distintos grupos de trabajo en Laboratorio  y conocid
 #### Tipografía
 La tipografía elegida es , 
 
-###2.5-Prototipo de Alta Fidelidad
+### 2.5-Prototipo de Alta Fidelidad
 
 Se generó observaciones de usabilidad y que fueron más relacionadas al diseño.
 
@@ -136,10 +140,11 @@ Menciono que la página era de pokémon, consulto nuevamente las instrucciones, 
 
 //- Las dificultades presentadas por el usuario fueron las de encontrar el botón para volver a ver todas las tarjetas, el cual se encontraba en el logo, por lo que se colocó de forma literal con el texto clickeable de "Ver todos los pokémon".
 //
-###2.7-Evaluacion heuristica
+### 2.7-Evaluacion heuristica
+
 Realizamos la evaluacion para nuestra pagina web en el siguente sitio [haz click aquí](https://docs.google.com/spreadsheets/d/13KVs7EeZd64uLJNtYMjTlWrmC0LBJHIkDwiietV4bU4/edit?usp=sharing)
 
-###2.8-Interfaz Usuario 
+### 2.8-Interfaz Usuario 
 
 La interfaz permite al usuario:
 
@@ -150,10 +155,10 @@ La interfaz permite al usuario:
 - Buscar Pokémon por Nombre.
 - Calculado agregado (DEFINIR )
 
-##3-Pruebas Unitarias 💻
+## 3-Pruebas Unitarias 💻
 
 
-##4-Herramientas 
+## 4-Herramientas 
 
 - Git
 - GitHub
