@@ -49,8 +49,6 @@ const filterTypesegg = (data , egg ) => {
 
 window.filterTypesegg = filterTypesegg;
 
-
-
 const calcPercent = (calcu, data) =>{
 let resultCalc = Math.round((calcu.length * 100) / data.length );
 return resultCalc;

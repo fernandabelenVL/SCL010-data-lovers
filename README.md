@@ -164,7 +164,7 @@ La interfaz permite al usuario:
 - Calculado agregado (DEFINIR )
 
 ##3 Pruebas Unitarias 💻
-
+![test](img-readme/pruebas-unitarias.png)
 
 ##4 Herramientas 
 - Git

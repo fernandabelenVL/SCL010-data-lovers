@@ -154,17 +154,36 @@ describe('filterTypes', () => {
   "type": ["Grass","Poison"]
   }
 ])
-  });
+});
 
 })
 
-  
+describe('filterTypesegg', () => {
+
+  it('debería ser una function', () => {
+  assert.equal(typeof window.filterTypesegg, 'function');
+  });
+
+  it('debería retornar el objeto Bulbasaur al filtrar por huevos de 2 Km' , () => {
+  assert.deepEqual(window.filterTypesegg(testData, '2 km'),[
+  {
+  "id": 1,
+  "num": "001",
+  "egg": "2 km",
+  "name": "Bulbasaur",
+  "type": ["Grass","Poison"]
+  }
+])
+});
+
+})
+
 describe ('calcPercent', ()=> {
   it('deberia ser una funcion', () => {
     assert.equal(typeof calcPercent, 'function')
   });
 
-  it('deberia retornar 33% al calcular huevos de 2km', () => {
-    assert.deepEqual(window.calcPercent(window.calcu, testData) ,"33%")
+  it('deberia retornar 28% al calcular huevos de 5km', () => {
+    assert.equal(window.calcPercent((window.filterTypesegg(window.data, '5 km')) , window.data) ,"28")
   });
 })
