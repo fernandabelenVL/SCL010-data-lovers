@@ -16,7 +16,8 @@
 
 [5. Desarrolladoras web](##5-Desarrolladoras-web)
 
-## 1. Contexto 
+
+## 1. Contexto 📋
 Pokémon GO es un videojuego de realidad aumentada basado en la localización del usuario desarrollado por Niantic, Inc. para dispositivos iOS y Android. Es un videojuego gratuito pero contiene microtransacciones. El juego consiste en buscar y capturar personajes de la saga Pokémon escondidos en ubicaciones del mundo real y luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar. 
 
 El juego fue lanzado oficialmente por en Estados Unidos, Australia y Nueva Zelanda el 6 de julio de 2016 y hasta el día de hoy a alcanzado un número aproximado de 120 millones de usuarios activos y un total de 550 millones de descargas en las tiendas de AppStore y Google Play
@@ -29,7 +30,7 @@ El juego fue lanzado oficialmente por en Estados Unidos, Australia y Nueva Zelan
 
 • Para acceder a demo de app [haz click aquí](https://alejandramoralesb.github.io/SCL010-data-lovers/src/index.html)
 
-###1.1. Usuario
+### 1.1. Usuario
 
 **Nivel Jugador:** Básico-intermedio de Pokémon Go!
 
@@ -40,9 +41,11 @@ Este usuario busca información general pero detallada de los pokémon de la reg
 El jugador básico-intermedio recién se está interiorizando dentro del mundo de Pokémon Go o lleva poco tiempo interactuando con el, por lo que necesita tener acceso a información general pero precisa de los personajes del juego; como el usuario  trata principalmente de encontrar y capturar pokémon, entrenarlos y hacerlos pelear entre sí, se decide jerarquizar la data desde lo más general a lo más específico con fin de facilitar la búsqueda de información para un usuario principiante como también otorgarle la oportunidad al usuario que necesita información detallada a internarse en secciones más específicas de la app.
 
 ### 1.2. Problemática del Usuario
+
 El usuario como jugado básico-intermedio necesita tener **acceso rápido, claro y organizado a información de los pokémon de la región de Kanto** disponibles en el juego Pokémon Go, tanto a manera general como individual, ya que para poder aumentar de nivel o lograr objetivos dentro del juego es necesario conocer algunas cualidades básicas de los personajes (por ejemplo qué tipo son y que debilidades tienen según tipo). Teniendo la información disponible los jugadores pueden lograr conocer cada uno de los pokémon, sus habilidades, debilidades, cómo evolucionarlos, cómo entrenarlos y cuándo es buen momento para atraparlos para convertirse en un mejor jugador y aumentar de nivel de personaje.
 
-###1.3. Objetivos de la app
+### 1.3. Objetivos de la Aplicación
+
 - Entregar información ordenada y clara a los usuarios del juego Pokémon Go!
 - Mostrar de manera global todos los pokémon disponibles en la región de Kanto.
 - Mostrar información más detallada sobre cada uno de los Pokémon y sus características básicas.
@@ -50,14 +53,15 @@ El usuario como jugado básico-intermedio necesita tener **acceso rápido, claro
 - Dar la opción al usuario de filtrar la información según su interés
 - Entregar información adicional o de interés al usuario como estadísticas, porcentajes, entre otros.
 
-##2. Metodología UX
+## 2. Metodología UX 📌
 
 ### 2.1. Encuesta
 En primera instancia se redacta y ejecuta una encuesta con el Formulario de Google Forms, para definir los parámetros generales de la aplicación, por ejemplo a qué usuario nos vamos a dirigir, cuáles son sus necesidades e intereses sobre y con el juego, como también para obtener claridad sobre cuál es la información más relevante a la que dichos usuarios necesitarían acceso.
 
 Con ésta información se plantea la jerarquización de la data y de sus funcionalidades para poder acomodarla dentro del flujo de la aplicación junto con parámetros de usabilidad (web y móvil) como también de diseño de interface (UI).
 
-####2.1.1. Alcance de la encuesta:
+#### 2.1.1. Alcance de la encuesta:
+
 La encuesta alcanzó un total de 36 respuestas en un día y se puede encontrar haciendo click [encuesta :memo:](https://docs.google.com/forms/d/e/1FAIpQLSdq6t9zDqskVMIGWNljzjxb7Z_z6tsroUHL9FXxoBTI1ueA7w/viewform)
 
 #### 2.1.2. Conclusiones de la encuesta:
@@ -176,7 +180,7 @@ La interfaz permite al usuario:
 
 ![test](img-readme/pruebas-unitarias.png)
 
-## 4 Herramientas 
+## 4 Herramientas  🛠️
 - Git
 - GitHub
 - GitHub Pages
@@ -185,7 +189,7 @@ La interfaz permite al usuario:
 - Trello (planificación)
 - Adobe XD (prototipado)
 
-## 5 Desarrolladoras
+## 5 Desarrolladoras✒️
 - Fernanda Vega 
 - Alejandra Morales 
 
