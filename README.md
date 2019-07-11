@@ -16,7 +16,6 @@
 
 [5. Desarrolladoras web](##5-Desarrolladoras-web)
 
-
 ## 1. Contexto 
 Pokémon GO es un videojuego de realidad aumentada basado en la localización del usuario desarrollado por Niantic, Inc. para dispositivos iOS y Android. Es un videojuego gratuito pero contiene microtransacciones. El juego consiste en buscar y capturar personajes de la saga Pokémon escondidos en ubicaciones del mundo real y luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar. 
 
@@ -130,7 +129,7 @@ La tipografía elegida es Fira Sans
 ![alt text](img-readme/prototipo-web.png)
 ![alt text](img-readme/prototipo-mobile.png)
 
-###2.6. Testeos de Usabilidad
+### 2.6. Testeos de Usabilidad
 Se testea con 5 personas presentando la página Info Dex, pidiéndoles que puedan: Visualizar la data, ordenar, filtrar y Buscar. 
 
 Al finalizarla el test se les pregunta:
@@ -173,11 +172,11 @@ La interfaz permite al usuario:
 - Buscar Pokémon por Nombre.
 - Calculo agregado : Dato curioso en % en los filtros . 
 
-##3 Pruebas Unitarias 💻
+## 3 Pruebas Unitarias 💻
 
 ![test](img-readme/pruebas-unitarias.png)
 
-##4 Herramientas 
+## 4 Herramientas 
 - Git
 - GitHub
 - GitHub Pages
@@ -186,7 +185,7 @@ La interfaz permite al usuario:
 - Trello (planificación)
 - Adobe XD (prototipado)
 
-##5 Desarrolladoras
+## 5 Desarrolladoras
 - Fernanda Vega 
 - Alejandra Morales 
 
