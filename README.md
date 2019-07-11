@@ -1,10 +1,10 @@
-#InfoDex 
+# InfoDex 
 
 ![infodex-banner](img-readme/ima-banner.jpg) 
 
 “InfoDex” es una aplicación web que les brinda a los usuarios información relevante sobre los pokémon de la región Kanto para poder ayudarlos a conocer más sobre cada uno de ellos y así mejorar su nivel y experiencia de juego. La aplicación está dirigida hacia jugadores básicos e intermedios, es decir, jugadores que recién comienzan en el mundo de Pokémon Go! O tienen conocimientos poco profundos sobre el por lo que la información disponible se adecúa a sus necesidades, requerimientos y curiosidades, para así convertirse en jugadores avanzados en Pokémon Go”.
 
-##Tabla de Contenidos 
+## Tabla de Contenidos 
 
 [1. Contexto](##1-Contexto)
 
@@ -17,7 +17,7 @@
 [5. Desarrolladoras web](##5-Desarrolladoras-web)
 
 
-##1. Contexto 
+## 1. Contexto 
 Pokémon GO es un videojuego de realidad aumentada basado en la localización del usuario desarrollado por Niantic, Inc. para dispositivos iOS y Android. Es un videojuego gratuito pero contiene microtransacciones. El juego consiste en buscar y capturar personajes de la saga Pokémon escondidos en ubicaciones del mundo real y luchar con ellos, lo que implica desplazarse físicamente por las calles de la ciudad para progresar. 
 
 El juego fue lanzado oficialmente por en Estados Unidos, Australia y Nueva Zelanda el 6 de julio de 2016 y hasta el día de hoy a alcanzado un número aproximado de 120 millones de usuarios activos y un total de 550 millones de descargas en las tiendas de AppStore y Google Play
@@ -31,6 +31,7 @@ El juego fue lanzado oficialmente por en Estados Unidos, Australia y Nueva Zelan
 • Para acceder a demo de app [haz click aquí](https://alejandramoralesb.github.io/SCL010-data-lovers/src/index.html)
 
 ###1.1. Usuario
+
 **Nivel Jugador:** Básico-intermedio de Pokémon Go!
 
 Una persona que tiene conocimientos básicos sobre el juego, o que lleva poco tiempo jugando; hombre o mujer dentro en rango etario amplio que se inicia desde los 10 años en adelante sin límite de edad.
