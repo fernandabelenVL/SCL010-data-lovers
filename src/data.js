@@ -31,9 +31,9 @@ function ordenByNumber (a, b) {
 const filterTypes = (data , type) => {
   let filterPokemon = data.filter(element => {
     // crea array nuevo con cada objeto que incluya el tipo "condition"
-    return element.type.includes(type)
+    return element.type.includes(type);
   });
-  return filterPokemon
+  return filterPokemon;
 };
 
 window.filterTypes = filterTypes;
@@ -42,31 +42,17 @@ window.filterTypes = filterTypes;
 const filterTypesegg = (data , egg ) => {
   let filterPokemonegg = data.filter(element => {
     // crea array nuevo con cada objeto que incluya el tipo "condition"
-    return element.egg.includes(egg)
+    return element.egg.includes(egg);
   });
-  return filterPokemonegg
+  return filterPokemonegg;
 };
 
 window.filterTypesegg = filterTypesegg;
 
-// //Filtrar por Tipo
-// const filterTypesPokemon = (type) => {
-// let data = window.POKEMON.pokemon;
-// let filter = [];
-// let i ="";
-//   for ( i = 0; i < data.length; i++) {
-//       if (data[i].type[0] == type) {
-//           filter.push(data[i]);
-//       } else if (data[i].type[1] == type) {
-//           filter.push(data[i]);
-//       }
-//   }
-// return filter;
-// }
-// window.filterTypesPokemon = filterTypesPokemon;
 
-const calcPercent = (value, data) =>{
-  let resultCalc = Math.round((value.length * 100) / data.length );
-  return resultCalc;
+
+const calcPercent = (calcu, data) =>{
+let resultCalc = Math.round((calcu.length * 100) / data.length );
+return resultCalc;
 } 
 window.calcPercent= calcPercent;

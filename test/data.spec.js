@@ -159,3 +159,12 @@ describe('filterTypes', () => {
 })
 
   
+describe ('calcPercent', ()=> {
+  it('deberia ser una funcion', () => {
+    assert.equal(typeof calcPercent, 'function')
+  });
+
+  it('deberia retornar 33% al calcular huevos de 2km', () => {
+    assert.deepEqual(window.calcPercent(window.calcu, testData) ,"33%")
+  });
+})

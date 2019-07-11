@@ -5,6 +5,7 @@ window.addEventListener("load", () => {
 //convertimos a objeto el array
 const allPokemon = window.POKEMON.pokemon;
 const container = document.getElementById("cards-container");
+const pokemonPorcent = document.getElementById("pokemon-porcent");
 
 let showPokemon = (arr) => {
   //creamos las cartas
@@ -55,30 +56,33 @@ selectType.addEventListener("change", ()=> {
   // el tipo seleccionado es almacenado en condition
   let condition = selectType.options[selectType.selectedIndex].value;
   // borra contenido de section
-  container.innerHTML = "El " + window.computeStats(pokemonType,dataPokemon) + "% del total de Pokemones corresponde al tipo " + condition;
+  container.innerHTML = "";
   // crea nuevos divs en base a array
   let pokeArray = window.filterTypes(window.data, condition);
-  showPokemon(pokeArray);
-  let pokeArray = window.filterType(window.data, condition);
+  pokemonPorcent.innerHTML="El " + window.calcPercent(pokeArray,window.data) + "% del total de Pokemones corresponde al tipo " + condition;
+  container.className = "pokemon-porcent";
+
   showPokemon(pokeArray);
 } 
 );
 
-let pokePercent="";
-const resultPercent = document.getElementById("containerPercent");
+//let pokePercent="";
+//const resultPercent = document.getElementById("containerPercent");
 //filtrar por Huevo Tipo de pokemon 
 const selectTypeegg = document.getElementById("egg");
 selectTypeegg.addEventListener("change", ()=> {
-  resultPercent.innerHTML = "";
-  // el tipo seleccionado es almacenado en condition
+  //resultPercent.innerHTML = "";
+  // el tipo seleccionado es almacenado en condition obteniendo valor por el usuario
   let condition = selectTypeegg.options[selectTypeegg.selectedIndex].value;
   // borra contenido de section
   container.innerHTML = "";
   // crea nuevos divs en base a array
   let pokeArray = window.filterTypesegg(window.data, condition);
+  pokemonPorcent.innerHTML="El " + window.calcPercent(pokeArray,window.data) + "% aparecen en los huevos de " + condition;
   showPokemon(pokeArray);
 } 
 );
+
 
 //Back to top
 window.onscroll = function() {scrollFunction()};
