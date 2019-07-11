@@ -1,11 +1,13 @@
 window.addEventListener("load", () => {
-  return showPokemon(allPokemon)
+  return showPokemon(allPokemon);
 });
 
 //convertimos a objeto el array
 const allPokemon = window.POKEMON.pokemon;
 const container = document.getElementById("cards-container");
 const pokemonPorcent = document.getElementById("pokemon-porcent");
+document.getElementById("pokemon-porcent").style.display = "none"
+
 
 let showPokemon = (arr) => {
   //creamos las cartas
@@ -55,34 +57,43 @@ const selectType = document.getElementById("type");
 selectType.addEventListener("change", ()=> {
   // el tipo seleccionado es almacenado en condition
   let condition = selectType.options[selectType.selectedIndex].value;
+  let conditionText = selectType.options[selectType.selectedIndex].text;
   // borra contenido de section
   container.innerHTML = "";
   // crea nuevos divs en base a array
   let pokeArray = window.filterTypes(window.data, condition);
-  pokemonPorcent.innerHTML="El " + window.calcPercent(pokeArray,window.data) + "% del total de Pokemones corresponde al tipo " + condition;
+  pokemonPorcent.innerHTML="<p>¡Un dato interesante!</p"
+  pokemonPorcent.innerHTML+="El " + window.calcPercent(pokeArray,window.data) + "% del total de Pokémon de la región de Kanto corresponde al tipo " + conditionText;
   container.className = "pokemon-porcent";
-
+  document.getElementById("pokemon-porcent").style.display = "block";
   showPokemon(pokeArray);
 } 
 );
 
-//let pokePercent="";
-//const resultPercent = document.getElementById("containerPercent");
-//filtrar por Huevo Tipo de pokemon 
+//filtrar por Huevo de pokemon 
 const selectTypeegg = document.getElementById("egg");
 selectTypeegg.addEventListener("change", ()=> {
-  //resultPercent.innerHTML = "";
   // el tipo seleccionado es almacenado en condition obteniendo valor por el usuario
   let condition = selectTypeegg.options[selectTypeegg.selectedIndex].value;
+  let conditionText = selectTypeegg.options[selectTypeegg.selectedIndex].text;
   // borra contenido de section
-  container.innerHTML = "";
   // crea nuevos divs en base a array
   let pokeArray = window.filterTypesegg(window.data, condition);
-  pokemonPorcent.innerHTML="El " + window.calcPercent(pokeArray,window.data) + "% aparecen en los huevos de " + condition;
-  showPokemon(pokeArray);
+  for (let i=0; i < pokeArray.length; i++){
+    container.innerHTML = "";
+    pokemonPorcent.innerHTML="<p>¡Un dato interesante!</p"
+    if (condition === "Not in Eggs") {
+      pokemonPorcent.innerHTML+="El " + window.calcPercent(pokeArray,window.data) + "% de los Pokémon de la región de Kanto no eclosionan en huevos" 
+      document.getElementById("pokemon-porcent").style.display = "block";  
+    }
+    else {
+      pokemonPorcent.innerHTML+="El " + window.calcPercent(pokeArray,window.data) + "% de los Pokémon de la región de Kanto eclosionan en huevos de " + conditionText;
+      document.getElementById("pokemon-porcent").style.display = "block";  
+    }
+    showPokemon(pokeArray);
+    }
 } 
 );
-
 
 //Back to top
 window.onscroll = function() {scrollFunction()};
@@ -94,7 +105,6 @@ function scrollFunction() {
     document.getElementById("back-to-top").style.display = "none";
   }
 }
-
 function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
@@ -102,7 +112,7 @@ function topFunction() {
 topFunction();
 
 
-//Busqueda Interna -> Pokemones
+//Busqueda Pokemones
 const search = document.getElementById("searchPokemon");
 const filter = () => {
     let enterSearch = search.value.toLowerCase();
@@ -153,7 +163,6 @@ const filter = () => {
       pokeCard.appendChild(pokeName);
       pokeCard.appendChild(pokeNumber);
       document.getElementById("cards-container").appendChild(pokeCard).innerHTML;
-    
       }
   }
 }
