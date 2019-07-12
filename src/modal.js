@@ -1,8 +1,9 @@
 window.addEventListener("load", () => {
 
-var btn = document.getElementById('modal-opener');
+var btn = document.getElementsByClassName('modal-opener');
 var modal = document.querySelector('.modal');
 
+for (let i = 0 ; i< btn.length; i++) {
 function attachModalListeners(modalElm) {
   modalElm.querySelector('.close_modal').addEventListener('click', toggleModal);
   modalElm.querySelector('.overlay').addEventListener('click', toggleModal);
@@ -25,6 +26,6 @@ function toggleModal() {
     detachModalListeners(modal);  
   }
 }
-btn.addEventListener('click', toggleModal);
-
+btn[i].addEventListener('click', toggleModal);
+}
 })

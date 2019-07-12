@@ -14,9 +14,8 @@ let showPokemon = (arr) => {
   for (let i = 0 ; i < arr.length; i++){
 
     let pokeCard = document.createElement("div");
-    pokeCard.id = "modal-opener"
     pokeCard.setAttribute("value" , arr[i].id);
-    pokeCard.className = "pokemon-card";
+    pokeCard.className = "modal-opener pokemon-card";
 
     //creamos una nueva imagen para cada elemento i de allPokemon
     let pokeImage = document.createElement('IMG');
