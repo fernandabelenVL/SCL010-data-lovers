@@ -14,8 +14,7 @@ let showPokemon = (arr) => {
   for (let i = 0 ; i < arr.length; i++){
 
     let pokeCard = document.createElement("div");
-    pokeCard.setAttribute("data-target" , "#modal-info");
-    pokeCard.setAttribute("data-toogle" , "modal");
+    pokeCard.id = "modal-opener"
     pokeCard.setAttribute("value" , arr[i].id);
     pokeCard.className = "pokemon-card";
 
@@ -32,7 +31,7 @@ let showPokemon = (arr) => {
     pokeNumber.innerHTML = "#" + arr[i].num;
     pokeNumber.className = "pokemon-number";
 
-  //agregar nuevos <p> dentro de un <div> con todos los nombre, números e imagénes
+    //agregar nuevos <p> dentro de un <div> con todos los nombre, números e imagénes
   pokeCard.appendChild(pokeImage);
   pokeCard.appendChild(pokeName);
   pokeCard.appendChild(pokeNumber);
@@ -40,11 +39,90 @@ let showPokemon = (arr) => {
   //imprime dentro del HTML todos los nuevos <div> dentro de la etiqueta "cards-container"
   document.getElementById("cards-container").appendChild(pokeCard).innerHTML;
 }
+let pokemonContainer = document.querySelectorAll("div.pokemon-card");
+pokemonContainer.forEach(element => {
+  element.addEventListener("click", () => {
+    let pokeInfo = getPokeById(arr, element.getAttribute("value"));
+    //console.log(pokeInfo);
+    let pokeNameTitle = document.getElementById("name-title");
+    pokeNameTitle.innerHTML = " ";
+    let modalTitle = document.createElement("p");
+    modalTitle.innerHTML = modalTitle.setAttribute("id", "modal-title");
+    modalTitle.innerHTML = pokeInfo.name;
+
+    let pokeImage = document.getElementById("modal-img");
+    pokeImage.innerHTML = "";
+    let modalImg = document.createElement("img");
+    modalImg.innerHTML = modalImg.setAttribute("src", pokeInfo.img)
+    modalImg.innerHTML = modalImg.setAttribute("alt", "pokemon-image");
+
+    let pokeDetail = document.getElementById("poke-detail");
+    pokeDetail.innerHTML = "";
+    let modalNumber = document.createElement("p");
+    modalNumber.innerHTML = pokeInfo.num;
+    let modalHeight = document.createElement("p");
+    modalHeight.innerHTML = pokeInfo.height;
+    let modalWeight = document.createElement("p");
+    modalWeight.innerHTML = pokeInfo.weight;
+
+    let typeList = document.createElement("div");
+    typeList.id= "type-list";
+    typeList.innerHTML = "";
+    pokeInfo.type.forEach(type => {
+    let typeClass = type.toLowerCase();
+    typeList.innerHTML += "<li class=\"type-list types type-box "+typeClass+"\">"+type+"</li>";
+    });
+
+    let weaknessList = document.createElement("div");
+    weaknessList.id= "weaknessList";
+    weaknessList.innerHTML = "";
+    pokeInfo.weaknesses.forEach(weak => {
+    let typeClass = weak.toLowerCase();
+    weaknessList.innerHTML += "<li class=\"weakness-list types type-box "+typeClass+"\">"+weak+"</li>";
+    });
+
+    let otherDetail= document.getElementById("other-detail");
+    otherDetail.innerHTML = "";
+    let modalCandy = document.createElement("p");
+    modalCandy.innerHTML = pokeInfo.candy;
+    let modalCandyCount = document.createElement("p");
+    modalCandyCount.innerHTML = pokeInfo.candy_count;
+    let modalEgg = document.createElement("p");
+    modalEgg.innerHTML = pokeInfo.egg;
+
+    let otherDetailTwo= document.getElementById("other-detail-two");
+    otherDetailTwo.innerHTML = "";
+    let modalSpawnChance = document.createElement("p");
+    modalSpawnChance.innerHTML = pokeInfo.spawn_chance;
+    let modalAvg = document.createElement("p");
+    modalAvg.innerHTML = pokeInfo.avg_spawns;
+    let modalTime = document.createElement("p");
+    modalTime.innerHTML = pokeInfo.spawn_time;
+    let modalMultipliers = document.createElement("p");
+    modalMultipliers.innerHTML = `${pokeInfo.multipliers}`;
+
+    pokeNameTitle.appendChild(modalTitle);
+    pokeImage.appendChild(modalImg);
+    pokeDetail.appendChild(modalNumber);
+    pokeDetail.appendChild(modalHeight);
+    pokeDetail.appendChild(modalWeight);
+    pokeDetail.appendChild(typeList);
+    pokeDetail.appendChild(weaknessList);
+    otherDetail.appendChild(modalCandy);
+    otherDetail.appendChild(modalCandyCount);
+    otherDetail.appendChild(modalEgg);
+    otherDetailTwo.appendChild(modalSpawnChance);
+    otherDetailTwo.appendChild(modalAvg);
+    otherDetailTwo.appendChild(modalTime);
+    otherDetailTwo.appendChild(modalMultipliers);
+  })
+})
 };
 //ordenar por nombre y tipo
 const sortPokemon = document.getElementById("sort-Pokemon");
 sortPokemon.addEventListener("change", ()=>{
   container.innerHTML="";
+  pokemonPorcent.innerHTML="";
   let data =window.POKEMON.pokemon;
   let condition = sortPokemon.options[sortPokemon.selectedIndex].value;
   //console.log(condition);
@@ -117,6 +195,7 @@ const search = document.getElementById("searchPokemon");
 const filter = () => {
     let enterSearch = search.value.toLowerCase();
     container.innerHTML = "";
+    pokemonPorcent.innerHTML="";
     for (let i = 0; i < allPokemon.length; i++) {
       let pokeName = allPokemon[i].name.toLowerCase();
       let pokeNumber = allPokemon[i].num;
@@ -144,8 +223,6 @@ const filter = () => {
 
       else if (pokeNumber.indexOf(enterSearch) !== -1) {
         let pokeCard = document.createElement("div");
-        pokeCard.setAttribute("data-target" , "#modal-info");
-        pokeCard.setAttribute("data-toogle" , "modal");
         pokeCard.setAttribute("value" , allPokemon[i].id);
         pokeCard.className = "pokemon-card";
     

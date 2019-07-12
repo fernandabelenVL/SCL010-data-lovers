@@ -43,11 +43,9 @@
           <div class="search-box">
             <span class="icon"></span><i class="fa fa-search"></i>
             <input type="text" id="searchPokemon" placeholder="Buscar pokémon"/>
-            <!--<input type="button" value="Buscar" id="search-btn"  onclick="searchPokemon()">-->
           </div>
         </div>
        <!-- Ordenar-->
-
           <div class = "sort">
           <div class="sortby-box">
             <label>Ordenar por:</label>
@@ -129,9 +127,98 @@
     </footer>
     <!--End Footer-->
 
-    <div id="root"></div>
+    <!--MODAL-->
+    <div class="modal">
+        <div class="overlay"></div>
+        <div class="modal_content">
+          <!-- Dynamic Section -->
+              <div class="modal-container" id="modal-container"> 
+                <div class="modal-header" id="modal-header">
+                  <!--<div><p><span><i class="fa fa-chevron-left"></i></span> Previus Pokemon</p></div>--> 
+                  <div id="name-title" class="name-title"></div>
+                  <!--<div><p>Next Pokemon <span><i class="fa fa-chevron-right"></i></span></p></div>-->
+                </div>
+                <div class="modal-info">
+                  <div class="info-content" id="modal-info">
+                    <div id="modal-img"></div>
+                    <div class="main-info">
+                      <p class="poke-title">PokeDex Data</p>
+                      <div class="text-data">
+                        <div class="gray-text">
+                            <p>Número</p>
+                            <p>Altura</p>
+                            <p>Peso</p>
+                            <p>Tipo</p>
+                            <p>Debilidades</p>    
+                        </div>
+                        <div id="poke-detail">
+                          <div id="modal-weak"></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+              </div>
+      
+              <div class="other-info" id="other-info">
+                  <div class="text-data">
+                    <div class="data-column">
+                      <div class="gray-text">
+                          <p>Tipo de Caramelo:</p>
+                          <p>Caramelos para evolucionar:</p>
+                          <p>Aparece en huevos de:</p>
+                      </div>
+                      <div id="other-detail"></div>
+                    </div>
+                    <div class="data-column">
+                      <div class="gray-text">
+                          <p>Probabilidad de Aparición:</p>
+                          <p>Aparición Promedio:</p>
+                          <p>Hora de aparición:</p>
+                          <p>Multiplicador:</p>
+                      </div>
+                      <div id="other-detail-two"></div>
+                    </div>
+                  </div>
+                </div>
+      
+                <!--<p class="poke-title center-text">Evoluciones</p>
+                <div class="evolutions" id="evolutions">
+                    <div class="evolution-cards">
+                      <div class="evo-card center-text" id="actual-pokemon">
+                        <div class="evo-image">
+                            <img src="http://www.serebii.net/pokemongo/pokemon/001.png" alt="evolucion">
+                        </div>
+                        <p><span>Bulbasaur </span><span>#001</span></p>
+                      </div>
+                      <div><i class="fa fa-chevron-right"></i></div>
+                      <div class="evo-card center-text">
+                          <div class="evo-image">
+                              <img src="http://www.serebii.net/pokemongo/pokemon/002.png" alt="evolucion">
+                          </div>
+                        <p><span>Ivysaur </span><span>#002</span></p>
+                        </div>
+                      <div><i class="fa fa-chevron-right"></i></div>
+                      <div class="evo-card center-text">
+                          <div class="evo-image">
+                              <img src="http://www.serebii.net/pokemongo/pokemon/003.png" alt="evolucion">
+                          </div>
+                        <p><span>Venusaur </span><span>#003</span></p>
+                        </div>
+                    </div>
+                </div>-->
+              </div>
+              <!-- End of Dynamic Section -->
+          <button title="Close" class="close_modal">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+      </div>
+      <!--End Modal-->
+
+      <div id="root"></div>
     <script src="./data/pokemon/pokemon.js"></script>
     <script src="data.js"></script>
     <script src="main.js"></script>
+    <script src="modal.js"></script>
   </body>
 </html>

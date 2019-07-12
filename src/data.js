@@ -27,7 +27,7 @@ function ordenByNumber (a, b) {
   return a.id - b.id;
 }
 
-// data = array | type = tipo objeto poke
+//filtrar por tipo de pokemon
 const filterTypes = (data , type) => {
   let filterPokemon = data.filter(element => {
     // crea array nuevo con cada objeto que incluya el tipo "condition"
@@ -35,10 +35,9 @@ const filterTypes = (data , type) => {
   });
   return filterPokemon;
 };
-
 window.filterTypes = filterTypes;
 
-//Filtrar por tipo de huevo y sacar el % 
+//Filtrar por tipo de huevo
 const filterTypesegg = (data , egg ) => {
   let filterPokemonegg = data.filter(element => {
     // crea array nuevo con cada objeto que incluya el tipo "condition"
@@ -46,11 +45,23 @@ const filterTypesegg = (data , egg ) => {
   });
   return filterPokemonegg;
 };
-
 window.filterTypesegg = filterTypesegg;
 
+//calculo de porcentajes
 const calcPercent = (calcu, data) =>{
 let resultCalc = Math.round((calcu.length * 100) / data.length );
 return resultCalc;
 } 
 window.calcPercent= calcPercent;
+
+//Get pkmn by id
+const getPokeById = (arr, id) => {
+let idPoke = arr.find(element => {
+  return element.id == id;
+  })
+return idPoke;
+}
+
+window.getPokeById = getPokeById;
+
+
