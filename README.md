@@ -14,7 +14,7 @@
 
 [4. Herramientas](##4-Herramientas)
 
-[5. Desarrolladoras web](##5-Desarrolladoras-web)
+[5. Desarrolladoras ](##5-Desarrolladoras-web)
 
 
 ## 1. Contexto 📋
@@ -112,29 +112,41 @@ Nuestro primer objetivo fue distribuir cada elemento de la App Web , de acuerdo 
 
 El sketch fue presentado a distintos grupos de trabajo en Laboratorio  y conocidos para obtener feed-back, los cuales la mayoría comento que  es un prototipo de fácil de uso y amigable.
 
+![sketch web](img-readme/sketch-web.png)
+![sketch mobile](img-readme/sketch-mobile.png)
+
 #### Wireframe
-Desarrollo formal de página web, en términos de estructura, contenidos y diagramación. Se desarrolla Wireframe para versión web y para versión mobile.
-![alt text](img-readme/wireframe-web.png)
-![alt text](img-readme/wireframe-mobile.png)
+Desarrollo formal de página web, en términos de estructura, contenidos y diagramación a partir de la información y datos recopiplados en la encuestra preliminar y test de usabilidad durante el desarrollo de la aplicación.
+Se desarrolla Wireframe para versión web y para versión mobile.
+![wireframe web](img-readme/wireframe-web.png)
+![wireframe mobile](img-readme/wireframe-mobile.png)
 
 ### 2.5 Prototipo de Alta Fidelidad
-Se generó observaciones de usabilidad y que fueron más relacionadas al diseño.
+Después de la definición de usuario, de sus características, intereses y gustos, se define el diseño visual de nuestra aplicación en términos de color, fuente, logo y contenido de imágenes entre otros.
 
 #### Colores 
 
 [Colores en Material.io](https://material.io/tools/color/#!/?view.left=1&view.right=0&primary.color=01579B&secondary.color=FFD600&primary.text.color=ffffff)
+![colors](img-readme/colores.png)
 
 #### Tipografía
-La tipografía elegida es Fira Sans
+![Tipografía](img-readme/texto.png)
 
 #### Logotipo
+![logotipo](img-readme/logotipo.png)
 
 #### Vistas
 ![alt text](img-readme/prototipo-web.png)
 ![alt text](img-readme/prototipo-mobile.png)
 
 ### 2.6. Testeos de Usabilidad
-Se testea con 5 personas presentando la página Info Dex, pidiéndoles que puedan: Visualizar la data, ordenar, filtrar y Buscar. 
+Se testea con 5 personas presentando la página Info Dex, pidiéndoles lo siguiente: 
+- Visualizar la data ¿identicas por nombre y número a los pokémon?
+- Ordena los pokómon por nombre ascendente.
+- Ordena los pokémon por número descendente.
+- Filtra los pokémon por tipo fuego.
+- Busca el pokemon "Alakazam". 
+- Filtra por cantidad de huevos.
 
 Al finalizarla el test se les pregunta:
 - ¿Sabes de que trata la página?
@@ -143,26 +155,27 @@ Al finalizarla el test se les pregunta:
 
 **Usuario 1:**
 Sebastián, 27 años, jugador Básico de Pokémon Go, trabajador.
-Menciono que la página se trataba sobre Pokémon , No tuvo problemas para resolver lo solicitado , expreso que la información está clara y de fácil acceso , menciono que podía saber claramente los pokemones de la primera generación y la utilizaría , pero agregaría información específica en cada uno de las cartas y verla de forma aumentada.
+Menciona que la página se trataba sobre Pokémon , No tuvo problemas para resolver lo solicitado , expresó que la información está clara y es de fácil acceso, también mencionó que podía saber claramente los pokemones de la primera generación y la utilizaría , pero agregaría información específica en cada uno de las cartas y verla de forma aumentada.
 
 **Usuario 2:**
 Camila, 18 años, No jugadora de Pokémon Go, Estudiante.
-Menciono que la página era de pokémon, consulto nuevamente las instrucciones, pero las pudo resolver. En la parte buscar sugirió colocar un botón para ejecutar, ya que no le quedaba muy claro, encontró que era un diseño atractivo que le servía para conocer a los pokemones si quisiera jugar, agregaría más interacción como videos.
+Menciono que la página era de pokémon, consultó nuevamente las instrucciones, pero las pudo resolver. En la parte buscar sugirió colocar un botón para "ejecutar", ya que no le quedaba muy claro, encontró que era un diseño atractivo que le servía para conocer a los pokemones si quisiera jugar, agregaría más interacción como videos.
 
 **Usuario 3:**
 Carolina, 24 años,  jugadora básica de Pokémon Go, Trabajadora.
-Menciono que la página era para jugar pokémon Go, dijo que si utilizaría la página para jugar y que agregaría más estadísticas a la página.
+Mencionó que la página era para jugar pokémon Go, dijo que si utilizaría la página para jugar y que agregaría más estadísticas a la página.
 
 **Usuario 4:**
 Fernando, 15 años,  jugador básico- intermedio de Pokémon Go, estudiante.
-Menciono que la página contenía información para para jugar pokémon Go, dijo que si utilizaría la página para sacar algunos datos, pero agregaría las otras generaciones de pokemones, ya que una no le bastaba para mejorar su juego.
+Mencionó que la página contenía información para para jugar pokémon Go, dijo que si utilizaría la página para sacar algunos datos, pero agregaría las otras generaciones de pokemones, ya que una no le bastaba para mejorar su juego.
 
 **Usuario 5:**
 Ema, 38 años,  jugadora básica de Pokémon Go, estudiante.
 Menciono que la página contenía información de Pokémon , dijo que si utilizaría la página, que sería útil para poder conocer a cada uno de los pokemones. Le gusto los datos interesantes y que no agregaría nada.
 
-En conclusión, tratamos de tomar todas las mejoras y consejos, logramos el objetivo de que la página se entendiera y la pudieran ocupar en alguna oportunidad, en lo que agregarían colocamos el botón buscar, pero las otras sugerencias  son cosas que están fuera de nuestro alcance por ahora, como colocar la data de las otras generaciones,  más datos estadísticos e interacción estos fueron por temas de tiempo.
+En conclusión, tratamos de tomar todas las mejoras y consejos, logramos el objetivo de que la página se entendiera y la pudieran ocupar en alguna oportunidad.
 
+En términos de funciones, jerarquización, botones y solectores, la información queda bastante clara, en cuanto a la observación del botón de buscar se descarta ya que se implementa posteriormente un buscador que ejecuta la búsqueda mintras el usuario escribe. En cuanto a las otras sugerencias  son cosas que están fuera de nuestro alcance por ahora, como colocar la data de las otras generaciones,  más datos estadísticos e interacción estos fueron por temas de tiempo, sin embargo no se descartan para una actualización a futuro.
 
 ### 2.7. Evaluacion heuristica
 Realizamos la evaluacion para nuestra pagina web en el siguente sitio [haz click aquí](https://docs.google.com/spreadsheets/d/13KVs7EeZd64uLJNtYMjTlWrmC0LBJHIkDwiietV4bU4/edit?usp=sharing)
@@ -185,13 +198,11 @@ La interfaz permite al usuario:
 - GitHub
 - GitHub Pages
 - Node.js
-- Visual Studio Code (Programación)
-- Trello (planificación)
-- Adobe XD (prototipado)
+- Visual Studio Code: Programación
+- Trello: [Planificación de proyecto](https://trello.com/b/eqeLcqDC/proyecto-2-data-lovers)
+- Adobe XD: Prototipado
+- Zeplin: [Prototipado](https://scene.zeplin.io/project/5d1f6b4c2a1bf3b00895319e)
 
-## 5 Desarrolladoras✒️
-- Fernanda Vega 
-- Alejandra Morales 
-
-
-
+## 5 Desarrolladoras ✒️
+- [Alejandra Morales](https://github.com/AlejandraMoralesB)
+- [Fernanda Vega](https://github.com/fernandabelenVL)
