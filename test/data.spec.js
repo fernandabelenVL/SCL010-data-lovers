@@ -1,7 +1,6 @@
 
 global.window = global;
 global.assert = require('chai').assert;
-require('../src/data/pokemon/pokemon');
 require('../src/data.js');
 require('./data.spec.js');
 
@@ -183,7 +182,27 @@ describe ('calcPercent', ()=> {
     assert.equal(typeof calcPercent, 'function')
   });
 
-  it('deberia retornar 28% al calcular huevos de 5km', () => {
-    assert.equal(window.calcPercent((window.filterTypesegg(window.data, '5 km')) , window.data) ,"28")
+  it('deberia retornar 67% al calcular huevos de 5km', () => {
+    assert.equal(window.calcPercent((window.filterTypesegg(testData, '5 km')) , testData) ,'67')
   });
+})
+
+describe('getPokeById', () => {
+
+  it('debería ser una function', () => {
+  assert.equal(typeof window.getPokeById, 'function');
+  });
+
+  it('debería retornar el objeto Bulbasaur al entregar el id 1' , () => {
+  assert.deepEqual(window.getPokeById(testData, 1),
+  {
+  "id": 1,
+  "num": "001",
+  "egg": "2 km",
+  "name": "Bulbasaur",
+  "type": ["Grass","Poison"]
+  }
+)
+});
+
 })

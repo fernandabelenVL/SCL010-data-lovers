@@ -1,13 +1,17 @@
-window.addEventListener("load", () => {
-  return showPokemon(allPokemon);
-});
+  let dataJson;
 
-//convertimos a objeto el array
-const allPokemon = window.POKEMON.pokemon;
+  fetch('https://raw.githubusercontent.com/fernandabelenVL/SCL010-data-lovers/master/src/data/pokemon/pokemon.json')
+  .then(function(response) {
+    return response.json();
+  })
+  .then((data) => {
+    dataJson = data.pokemon;
+    showPokemon(dataJson);
+  })
+
 const container = document.getElementById("cards-container");
 const pokemonPorcent = document.getElementById("pokemon-porcent");
 document.getElementById("pokemon-porcent").style.display = "none"
-
 
 let showPokemon = (arr) => {
   //creamos las cartas
@@ -17,11 +21,11 @@ let showPokemon = (arr) => {
     pokeCard.setAttribute("value" , arr[i].id);
     pokeCard.className = "modal-opener pokemon-card";
 
-    //creamos una nueva imagen para cada elemento i de allPokemon
+    //creamos una nueva imagen para cada elemento i de dataJson
     let pokeImage = document.createElement('IMG');
     pokeImage.setAttribute("src", arr[i].img)
     
-    //creamos una nueva p para nombre y para número de allPokemon
+    //creamos una nueva p para nombre y para número de dataJson
     let pokeName = document.createElement('p');
     pokeName.innerHTML = arr[i].name;
     pokeName.className = "pokemon-name";
@@ -31,18 +35,19 @@ let showPokemon = (arr) => {
     pokeNumber.className = "pokemon-number";
 
     //agregar nuevos <p> dentro de un <div> con todos los nombre, números e imagénes
-  pokeCard.appendChild(pokeImage);
-  pokeCard.appendChild(pokeName);
-  pokeCard.appendChild(pokeNumber);
+    pokeCard.appendChild(pokeImage);
+    pokeCard.appendChild(pokeName);
+    pokeCard.appendChild(pokeNumber);
 
-  //imprime dentro del HTML todos los nuevos <div> dentro de la etiqueta "cards-container"
-  document.getElementById("cards-container").appendChild(pokeCard).innerHTML;
-}
-let pokemonContainer = document.querySelectorAll("div.pokemon-card");
-pokemonContainer.forEach(element => {
-  element.addEventListener("click", () => {
-    let pokeInfo = getPokeById(arr, element.getAttribute("value"));
-    //console.log(pokeInfo);
+    //imprime dentro del HTML todos los nuevos <div> dentro de la etiqueta "cards-container"
+    document.getElementById("cards-container").appendChild(pokeCard).innerHTML;
+} 
+    //MODAL
+    for (let i = 0; i< dataJson.length; i++){
+    let pokemonContainer = document.querySelectorAll("div.modal-opener.pokemon-card");
+    pokemonContainer.forEach(element => {
+    element.addEventListener("click", () => {
+    let pokeInfo = window.getPokeById(dataJson, element.getAttribute("value"));
     let pokeNameTitle = document.getElementById("name-title");
     pokeNameTitle.innerHTML = " ";
     let modalTitle = document.createElement("p");
@@ -114,63 +119,116 @@ pokemonContainer.forEach(element => {
     otherDetailTwo.appendChild(modalAvg);
     otherDetailTwo.appendChild(modalTime);
     otherDetailTwo.appendChild(modalMultipliers);
-  })
-})
-};
-//ordenar por nombre y tipo
-const sortPokemon = document.getElementById("sort-Pokemon");
-sortPokemon.addEventListener("change", ()=>{
-  container.innerHTML="";
-  pokemonPorcent.innerHTML="";
-  let data =window.POKEMON.pokemon;
-  let condition = sortPokemon.options[sortPokemon.selectedIndex].value;
-  //console.log(condition);
-  window.sortBy(data, condition);
-  showPokemon(data);
-  });
+    })
+    });
+  }
+}
+    //ordenar por nombre y tipo
+    const sortPokemon = document.getElementById("sort-Pokemon");
+    sortPokemon.addEventListener("change", ()=>{
+    container.innerHTML="";
+    pokemonPorcent.innerHTML="";
+    let condition = sortPokemon.options[sortPokemon.selectedIndex].value;
+    window.sortBy(dataJson, condition);
+    showPokemon(dataJson);
+    });
 
-//filtrar por tipo
-const selectType = document.getElementById("type");
-selectType.addEventListener("change", ()=> {
-  // el tipo seleccionado es almacenado en condition
-  let condition = selectType.options[selectType.selectedIndex].value;
-  let conditionText = selectType.options[selectType.selectedIndex].text;
-  // borra contenido de section
-  container.innerHTML = "";
-  // crea nuevos divs en base a array
-  let pokeArray = window.filterTypes(window.data, condition);
-  pokemonPorcent.innerHTML="<p>¡Un dato interesante!</p"
-  pokemonPorcent.innerHTML+="El " + window.calcPercent(pokeArray,window.data) + "% del total de Pokémon de la región de Kanto corresponde al tipo " + conditionText;
-  container.className = "pokemon-porcent";
-  document.getElementById("pokemon-porcent").style.display = "block";
-  showPokemon(pokeArray);
-} 
-);
-
-//filtrar por Huevo de pokemon 
-const selectTypeegg = document.getElementById("egg");
-selectTypeegg.addEventListener("change", ()=> {
-  // el tipo seleccionado es almacenado en condition obteniendo valor por el usuario
-  let condition = selectTypeegg.options[selectTypeegg.selectedIndex].value;
-  let conditionText = selectTypeegg.options[selectTypeegg.selectedIndex].text;
-  // borra contenido de section
-  // crea nuevos divs en base a array
-  let pokeArray = window.filterTypesegg(window.data, condition);
-  for (let i=0; i < pokeArray.length; i++){
+    //filtrar por tipo
+    const selectType = document.getElementById("type");
+    selectType.addEventListener("change", ()=> {
+    let condition = selectType.options[selectType.selectedIndex].value;
+    let conditionText = selectType.options[selectType.selectedIndex].text;
     container.innerHTML = "";
+    let pokeArray = window.filterTypes(dataJson, condition);
     pokemonPorcent.innerHTML="<p>¡Un dato interesante!</p"
-    if (condition === "Not in Eggs") {
-      pokemonPorcent.innerHTML+="El " + window.calcPercent(pokeArray,window.data) + "% de los Pokémon de la región de Kanto no eclosionan en huevos" 
-      document.getElementById("pokemon-porcent").style.display = "block";  
-    }
-    else {
-      pokemonPorcent.innerHTML+="El " + window.calcPercent(pokeArray,window.data) + "% de los Pokémon de la región de Kanto eclosionan en huevos de " + conditionText;
-      document.getElementById("pokemon-porcent").style.display = "block";  
-    }
+    pokemonPorcent.innerHTML+="El " + window.calcPercent(pokeArray, dataJson) + "% del total de Pokémon de la región de Kanto corresponde al tipo " + conditionText;
+    container.className = "pokemon-porcent";
+    document.getElementById("pokemon-porcent").style.display = "block";
     showPokemon(pokeArray);
+    });
+
+    //filtrar por Huevo de pokemon 
+    const selectTypeegg = document.getElementById("egg");
+    selectTypeegg.addEventListener("change", ()=> {
+    // el tipo seleccionado es almacenado en condition obteniendo valor por el usuario
+    let condition = selectTypeegg.options[selectTypeegg.selectedIndex].value;
+    let conditionText = selectTypeegg.options[selectTypeegg.selectedIndex].text;
+    let newArray = window.filterTypesegg(dataJson, condition);
+    for (let i=0; i < newArray.length; i++){
+      container.innerHTML = "";
+      pokemonPorcent.innerHTML="<p>¡Un dato interesante!</p"
+      if (condition === "Not in Eggs") {
+        pokemonPorcent.innerHTML+="El " + window.calcPercent(newArray, dataJson) + "% de los Pokémon de la región de Kanto no eclosionan en huevos" 
+        document.getElementById("pokemon-porcent").style.display = "block";  
+      }
+      else {
+        pokemonPorcent.innerHTML+="El " + window.calcPercent(newArray, dataJson) + "% de los Pokémon de la región de Kanto eclosionan en huevos de " + conditionText;
+        document.getElementById("pokemon-porcent").style.display = "block";  
+      }
+      showPokemon(newArray);
+      }
+    });
+
+    //Busqueda Pokemones
+    const search = document.getElementById("searchPokemon");
+    const filter = () => {  
+      let enterSearch = search.value.toLowerCase();
+      container.innerHTML = "";
+      pokemonPorcent.innerHTML="";
+        for (let i = 0; i < dataJson.length; i++) {
+          let pokeName = dataJson[i].name.toLowerCase();
+          let pokeNumber = dataJson[i].num;
+
+          if (pokeName.indexOf(enterSearch) !== -1) {
+            let pokeCard = document.createElement("div");
+            pokeCard.setAttribute("value" , dataJson[i].id);
+            pokeCard.className = "pokemon-card";
+        
+            let pokeImage = document.createElement('IMG');
+            pokeImage.setAttribute("src", dataJson[i].img)
+            
+            let pokeName = document.createElement('p');
+            pokeName.innerHTML = dataJson[i].name;
+            pokeName.className = "pokemon-name";
+        
+            let pokeNumber = document.createElement('p');
+            pokeNumber.innerHTML = "#" + dataJson[i].num;
+            pokeNumber.className = "pokemon-number";
+
+            pokeCard.appendChild(pokeImage);
+            pokeCard.appendChild(pokeName);
+            pokeCard.appendChild(pokeNumber);
+            document.getElementById("cards-container").appendChild(pokeCard).innerHTML;
+          }
+
+          else if (pokeNumber.indexOf(enterSearch) !== -1) {
+            let pokeCard = document.createElement("div");
+            pokeCard.setAttribute("value" , dataJson[i].id);
+            pokeCard.className = "pokemon-card";
+        
+            let pokeImage = document.createElement('IMG');
+            pokeImage.setAttribute("src", dataJson[i].img)
+            
+            let pokeName = document.createElement('p');
+            pokeName.innerHTML = dataJson[i].name;
+            pokeName.className = "pokemon-name";
+        
+            let pokeNumber = document.createElement('p');
+            pokeNumber.innerHTML = "#" + dataJson[i].num;
+            pokeNumber.className = "pokemon-number";
+            pokeCard.appendChild(pokeImage);
+            pokeCard.appendChild(pokeName);
+            pokeCard.appendChild(pokeNumber);
+            document.getElementById("cards-container").appendChild(pokeCard).innerHTML;
+          }
+        }
     }
-} 
-);
+    search.addEventListener("keyup", filter);
+
+
+
+
+
 
 //Back to top
 window.onscroll = function() {scrollFunction()};
@@ -186,60 +244,5 @@ function topFunction() {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
-topFunction();
+topFunction()
 
-
-//Busqueda Pokemones
-const search = document.getElementById("searchPokemon");
-const filter = () => {
-    let enterSearch = search.value.toLowerCase();
-    container.innerHTML = "";
-    pokemonPorcent.innerHTML="";
-    for (let i = 0; i < allPokemon.length; i++) {
-      let pokeName = allPokemon[i].name.toLowerCase();
-      let pokeNumber = allPokemon[i].num;
-
-      if (pokeName.indexOf(enterSearch) !== -1) {
-        let pokeCard = document.createElement("div");
-        pokeCard.setAttribute("value" , allPokemon[i].id);
-        pokeCard.className = "pokemon-card";
-    
-        let pokeImage = document.createElement('IMG');
-        pokeImage.setAttribute("src", allPokemon[i].img)
-        
-        let pokeName = document.createElement('p');
-        pokeName.innerHTML = allPokemon[i].name;
-        pokeName.className = "pokemon-name";
-    
-        let pokeNumber = document.createElement('p');
-        pokeNumber.innerHTML = "#" + allPokemon[i].num;
-        pokeNumber.className = "pokemon-number";
-      pokeCard.appendChild(pokeImage);
-      pokeCard.appendChild(pokeName);
-      pokeCard.appendChild(pokeNumber);
-      document.getElementById("cards-container").appendChild(pokeCard).innerHTML;
-    }
-
-      else if (pokeNumber.indexOf(enterSearch) !== -1) {
-        let pokeCard = document.createElement("div");
-        pokeCard.setAttribute("value" , allPokemon[i].id);
-        pokeCard.className = "pokemon-card";
-    
-        let pokeImage = document.createElement('IMG');
-        pokeImage.setAttribute("src", allPokemon[i].img)
-        
-        let pokeName = document.createElement('p');
-        pokeName.innerHTML = allPokemon[i].name;
-        pokeName.className = "pokemon-name";
-    
-        let pokeNumber = document.createElement('p');
-        pokeNumber.innerHTML = "#" + allPokemon[i].num;
-        pokeNumber.className = "pokemon-number";
-      pokeCard.appendChild(pokeImage);
-      pokeCard.appendChild(pokeName);
-      pokeCard.appendChild(pokeNumber);
-      document.getElementById("cards-container").appendChild(pokeCard).innerHTML;
-      }
-  }
-}
-search.addEventListener("keyup", filter);

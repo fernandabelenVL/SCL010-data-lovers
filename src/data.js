@@ -1,5 +1,3 @@
-let data = window.POKEMON.pokemon;
-window.data = data;
 
 //filtrar por nombre y número
 let sortBy = (data, condition) => {
@@ -28,7 +26,7 @@ function ordenByNumber (a, b) {
 }
 
 //filtrar por tipo de pokemon
-const filterTypes = (data , type) => {
+const filterTypes = (data, type) => {
   let filterPokemon = data.filter(element => {
     // crea array nuevo con cada objeto que incluya el tipo "condition"
     return element.type.includes(type);
@@ -38,7 +36,7 @@ const filterTypes = (data , type) => {
 window.filterTypes = filterTypes;
 
 //Filtrar por tipo de huevo
-const filterTypesegg = (data , egg ) => {
+const filterTypesegg = (data, egg ) => {
   let filterPokemonegg = data.filter(element => {
     // crea array nuevo con cada objeto que incluya el tipo "condition"
     return element.egg.includes(egg);
@@ -48,20 +46,19 @@ const filterTypesegg = (data , egg ) => {
 window.filterTypesegg = filterTypesegg;
 
 //calculo de porcentajes
-const calcPercent = (calcu, data) =>{
+const calcPercent = (calcu, data) => {
 let resultCalc = Math.round((calcu.length * 100) / data.length );
 return resultCalc;
 } 
 window.calcPercent= calcPercent;
 
-//Get pkmn by id
-const getPokeById = (arr, id) => {
-let idPoke = arr.find(element => {
-  return element.id == id;
-  })
-return idPoke;
-}
+  //Get pokemon by id
+  const getPokeById = (data, id) => {
+    let idPoke = data.find(element => {
+    return element.id == id;
+    })
+    return idPoke;
+  }
 
-window.getPokeById = getPokeById;
-
-
+  window.getPokeById = getPokeById;
+  

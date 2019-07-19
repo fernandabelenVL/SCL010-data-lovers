@@ -1,187 +1,193 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>InfoDex</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&display=swap" rel="stylesheet">  
-    <link rel="icon" type="image/png" href="images/favicon.png">
-    <script src="https://kit.fontawesome.com/3e7b4a9a03.js"></script>
-  </head>
-  <body>
-    <!--Start Header-->
-    <header>
-      <nav>
-        <div class="logo">
-          <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX-Logo"></a>
-        </div>
-        <div class="nav-links">
-          <a href="index.html" class="current">Inicio</a>
-          <a href="https://pokemongolive.com/es/" target="_blank">Noticias</a>
-          <a href="#">Contacto</a>
-        </div>
-      </nav>
-    </header>
-    <!--End Header-->
 
-    <!--Start Main-->
-    <main>
-      <section>
-        <div class="main-bg">
-            <div class="intro">
-              <h1>Bienvenido a InfoDex</h1>
-              <h2>Donde encontrarás toda la información sobre la generación Kanto en Pokémon Go!.<br>¡Descubre y anímate a atraparlos todos!</h2>
-          </div>
+<head>
+  <meta charset="utf-8">
+  <title>InfoDex</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300,400,500,700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <script src="https://kit.fontawesome.com/3e7b4a9a03.js"></script>
+</head>
+
+<body>
+  <!--Start Header-->
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX-Logo"></a>
+      </div>
+      <div class="nav-links">
+        <a href="index.html" class="current">Inicio</a>
+        <a href="https://pokemongolive.com/es/" target="_blank">Noticias</a>
+        <a href="#">Contacto</a>
+      </div>
+    </nav>
+  </header>
+  <!--End Header-->
+
+  <!--Start Main-->
+  <main>
+    <section>
+      <div class="main-bg">
+        <div class="intro">
+          <h1>Bienvenido a InfoDex</h1>
+          <h2>Donde encontrarás toda la información sobre la generación Kanto en Pokémon Go!.
+            <br>¡Descubre y anímate a atraparlos todos!
+          </h2>
         </div>
-      </section>
-      <!--Opciones -->
-      <section class="options-web">
-          <!--Buscar-->
-          <div class="search">
-            <label>Busca por nombre o número</label>
-          <div class="search-box">
-            <span class="icon"></span><i class="fa fa-search"></i>
-            <input type="text" id="searchPokemon" placeholder="Buscar pokémon"/>
-          </div>
+      </div>
+    </section>
+    <!--Opciones -->
+    <section class="options-web">
+      <!--Buscar-->
+      <div class="search">
+        <label>Busca por nombre o número</label>
+        <div class="search-box">
+          <span class="icon"></span><i class="fa fa-search"></i>
+          <input type="text" id="searchPokemon" placeholder="Buscar pokémon" />
         </div>
-       <!-- Ordenar-->
-          <div class = "sort">
-          <div class="sortby-box">
-            <label>Ordenar por:</label>
-            <select name="Order" id="sort-Pokemon">
-              <option disabled selected value> Ordenar por:</option>
-              <option id="name-up" value="A-Z">A-Z</option>
-              <option id="name-down" value="Z-A">Z-A</option>
-              <option id="num-up" value="1-151">1-151</option>
-              <option id="num-down" value="151-1">151-1</option>
+      </div>
+      <!-- Ordenar-->
+      <div class="sort">
+        <div class="sortby-box">
+          <label>Ordenar por:</label>
+          <select name="Order" id="sort-Pokemon">
+            <option disabled selected value> Ordenar por:</option>
+            <option id="name-up" value="A-Z">A-Z</option>
+            <option id="name-down" value="Z-A">Z-A</option>
+            <option id="num-up" value="1-151">1-151</option>
+            <option id="num-down" value="151-1">151-1</option>
           </select>
-          </div>
-          <!--Filtrar-->
-          <div class="type-filter">
-            <label>Filtrar por tipo:</label>
-            <select name="filter" id="type">
-              <option disabled selected value>Filtro por Tipo:</option>
-              <option value="Water">Agua</option>
-              <option value="Bug">Bicho-Insecto</option>
-              <option value="Dragon">Dragón</option>
-              <option value="Electric">Eléctrico</option>
-              <option value="Ghost">Fantasma</option>
-              <option value="Fire">Fuego</option>
-              <option value="Ice">Hielo</option>
-              <option value="Fighting">Lucha</option>
-              <option value="Normal">Normal</option>
-              <option value="Grass">Planta </option>
-              <option value="Psychic">Psíquico</option>
-              <option value="Rock">Roca</option>
-              <option value="Ground">Tierra</option>
-              <option value="Poison">Veneno</option>
-              <option value="Flying">Volador</option>
-            </select>
-          </div>
-            <!--Valor agregado-->
-          <div class="value-box">
-              <label>Filtrar por Huevo:</label>
-              <select name="filter" id="egg">
-                <option disabled selected value> Filtro por Huevos </option>
-                <option value="2 km">2 kms</option>
-                <option value="5 km">5 kms </option>
-                <option value="10 km">10 kms</option>
-                <option value="Not in Eggs">No aparece en huevos </option>
-              </select>      
-          </div>
         </div>
-      </section>
-      <!--Pokemon Cards-->
-      <section id="pokemon-porcent"></section>
-      <section id="cards-container"></section>
-    </main>
-    <!--End Main-->
+        <!--Filtrar-->
+        <div class="type-filter">
+          <label>Filtrar por tipo:</label>
+          <select name="filter" id="type">
+            <option disabled selected value>Filtro por Tipo:</option>
+            <option value="Water">Agua</option>
+            <option value="Bug">Bicho-Insecto</option>
+            <option value="Dragon">Dragón</option>
+            <option value="Electric">Eléctrico</option>
+            <option value="Ghost">Fantasma</option>
+            <option value="Fire">Fuego</option>
+            <option value="Ice">Hielo</option>
+            <option value="Fighting">Lucha</option>
+            <option value="Normal">Normal</option>
+            <option value="Grass">Planta </option>
+            <option value="Psychic">Psíquico</option>
+            <option value="Rock">Roca</option>
+            <option value="Ground">Tierra</option>
+            <option value="Poison">Veneno</option>
+            <option value="Flying">Volador</option>
+          </select>
+        </div>
+        <!--Valor agregado-->
+        <div class="value-box">
+          <label>Filtrar por Huevo:</label>
+          <select name="filter" id="egg">
+            <option disabled selected value> Filtro por Huevos </option>
+            <option value="2 km">2 kms</option>
+            <option value="5 km">5 kms </option>
+            <option value="10 km">10 kms</option>
+            <option value="Not in Eggs">No aparece en huevos </option>
+          </select>
+        </div>
+      </div>
+    </section>
+    <!--Pokemon Cards-->
+    <section id="pokemon-porcent"></section>
+    <section id="cards-container"></section>
+  </main>
+  <!--End Main-->
 
-    <!--Start Footer-->
-    <footer class="footer-content">
-        <div class="info-box">
-            <div class="logo">
-                <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX Logo"></a>
-            </div>
-            <div class="footer-info">
-              <p>InfoDex es una aplicación que te ayudará a conocer sobre más sobre los pókemon de la región de Kanto.</p>
-              <div class="social-icons">
-                <a href="index.html"><img src="images/facebook-icon.png"></a>
-                <a href="index.html"><img src="images/instagram-icon.png"></a>
+  <!--Start Footer-->
+  <footer class="footer-content">
+    <div class="info-box">
+      <div class="logo">
+        <a href="index.html"><img src="images/infodex-logo.png" alt="INFODEX Logo"></a>
+      </div>
+      <div class="footer-info">
+        <p>InfoDex es una aplicación que te ayudará a conocer sobre más sobre los pókemon de la región de Kanto.</p>
+        <div class="social-icons">
+          <a href="index.html"><img src="images/facebook-icon.png" alt="facebook"></a>
+          <a href="index.html"><img src="images/instagram-icon.png" alt="instagram"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="subscribe">
+      <p>Suscríbete a nuestras novedades</p>
+      <input type="email" placeholder="Ingresa tu email">
+      <button id="subscribe-btn">Suscríbete</button>
+    </div>
+
+  </footer>
+
+  <footer class="copyright">
+    <p>&copy; Copyright Info Dex 2019 / Design and Development by <a href="https://github.com/AlejandraMoralesB"
+        target="blank_">Alejandra Morales</a> & <a href="https://github.com/fernandabelenVL" target="blank_">Fernanda
+        Vega</a></p>
+    <button onclick="topFunction()" id="back-to-top" title="Go to top"> <i class="fas fa-arrow-up"></i></button>
+  </footer>
+  <!--End Footer-->
+
+  <!--MODAL-->
+  <div class="modal">
+    <div class="overlay"></div>
+    <div class="modal_content">
+      <!-- Dynamic Section -->
+      <div class="modal-container" id="modal-container">
+        <div class="modal-header" id="modal-header">
+          <!--<div><p><span><i class="fa fa-chevron-left"></i></span> Previus Pokemon</p></div>-->
+          <div id="name-title" class="name-title"></div>
+          <!--<div><p>Next Pokemon <span><i class="fa fa-chevron-right"></i></span></p></div>-->
+        </div>
+        <div class="modal-info">
+          <div class="info-content" id="modal-info">
+            <div id="modal-img"></div>
+            <div class="main-info">
+              <p class="poke-title">PokeDex Data</p>
+              <div class="text-data">
+                <div class="gray-text">
+                  <p>Número</p>
+                  <p>Altura</p>
+                  <p>Peso</p>
+                  <p>Tipo</p>
+                  <p>Debilidades</p>
+                </div>
+                <div id="poke-detail">
+                  <div id="modal-weak"></div>
+                </div>
               </div>
             </div>
-        </div>
-      
-        <div class="subscribe">
-          <p>Suscríbete a nuestras novedades</p>
-          <input type="email" placeholder="Ingresa tu email">
-          <button id="subscribe-btn">Suscríbete</button>
+          </div>
         </div>
 
-    </footer>
-
-    <footer class="copyright">
-          <p>&copy; Copyright Info Dex 2019 / Design and Development by <a href="https://github.com/AlejandraMoralesB" target="blank_">Alejandra Morales</a> & <a href="https://github.com/fernandabelenVL" target="blank_">Fernanda Vega</a></p>
-          <button onclick="topFunction()" id="back-to-top" title="Go to top"> <i class="fas fa-arrow-up"></i></button>
-    </footer>
-    <!--End Footer-->
-
-    <!--MODAL-->
-    <div class="modal">
-        <div class="overlay"></div>
-        <div class="modal_content">
-          <!-- Dynamic Section -->
-              <div class="modal-container" id="modal-container"> 
-                <div class="modal-header" id="modal-header">
-                  <!--<div><p><span><i class="fa fa-chevron-left"></i></span> Previus Pokemon</p></div>--> 
-                  <div id="name-title" class="name-title"></div>
-                  <!--<div><p>Next Pokemon <span><i class="fa fa-chevron-right"></i></span></p></div>-->
-                </div>
-                <div class="modal-info">
-                  <div class="info-content" id="modal-info">
-                    <div id="modal-img"></div>
-                    <div class="main-info">
-                      <p class="poke-title">PokeDex Data</p>
-                      <div class="text-data">
-                        <div class="gray-text">
-                            <p>Número</p>
-                            <p>Altura</p>
-                            <p>Peso</p>
-                            <p>Tipo</p>
-                            <p>Debilidades</p>    
-                        </div>
-                        <div id="poke-detail">
-                          <div id="modal-weak"></div>
-                        </div>
-                      </div>
-                    </div>
-                </div>
+        <div class="other-info" id="other-info">
+          <div class="text-data">
+            <div class="data-column">
+              <div class="gray-text">
+                <p>Tipo de Caramelo:</p>
+                <p>Caramelos para evolucionar:</p>
+                <p>Aparece en huevos de:</p>
               </div>
-      
-              <div class="other-info" id="other-info">
-                  <div class="text-data">
-                    <div class="data-column">
-                      <div class="gray-text">
-                          <p>Tipo de Caramelo:</p>
-                          <p>Caramelos para evolucionar:</p>
-                          <p>Aparece en huevos de:</p>
-                      </div>
-                      <div id="other-detail"></div>
-                    </div>
-                    <div class="data-column">
-                      <div class="gray-text">
-                          <p>Probabilidad de Aparición:</p>
-                          <p>Aparición Promedio:</p>
-                          <p>Hora de aparición:</p>
-                          <p>Multiplicador:</p>
-                      </div>
-                      <div id="other-detail-two"></div>
-                    </div>
-                  </div>
-                </div>
-      
-                <!--<p class="poke-title center-text">Evoluciones</p>
+              <div id="other-detail"></div>
+            </div>
+            <div class="data-column">
+              <div class="gray-text">
+                <p>Probabilidad de Aparición:</p>
+                <p>Aparición Promedio:</p>
+                <p>Hora de aparición:</p>
+                <p>Multiplicador:</p>
+              </div>
+              <div id="other-detail-two"></div>
+            </div>
+          </div>
+        </div>
+
+        <!--<p class="poke-title center-text">Evoluciones</p>
                 <div class="evolutions" id="evolutions">
                     <div class="evolution-cards">
                       <div class="evo-card center-text" id="actual-pokemon">
@@ -206,19 +212,21 @@
                         </div>
                     </div>
                 </div>-->
-              </div>
-              <!-- End of Dynamic Section -->
-          <button title="Close" class="close_modal">
-            <i class="fas fa-times"></i>
-          </button>
-        </div>
       </div>
-      <!--End Modal-->
+      <!-- End of Dynamic Section -->
+      <button title="Close" class="close_modal">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+  </div>
+  <!--End Modal-->
 
-      <div id="root"></div>
-    <script src="./data/pokemon/pokemon.js"></script>
-    <script src="data.js"></script>
-    <script src="main.js"></script>
-    <script src="modal.js"></script>
-  </body>
+  <div id="root"></div>
+  <script src="./data/pokemon/pokemon.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+  <script src="modal.js"></script>
+  <script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+</body>
+
 </html>
