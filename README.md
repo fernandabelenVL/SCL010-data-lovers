@@ -28,7 +28,7 @@ El juego fue lanzado oficialmente por en Estados Unidos, Australia y Nueva Zelan
 
 • Para descargar el juego o ver sus actualizaciones [haz click aquí](https://pokemongolive.com/es/)
 
-• Para acceder a demo de app [haz click aquí](https://alejandramoralesb.github.io/SCL010-data-lovers/src/index.html)
+• Para acceder a demo de app [haz click aquí](https://fernandabelenvl.github.io/SCL010-data-lovers/src/index.html)
 
 ### 1.1. Usuario
 
